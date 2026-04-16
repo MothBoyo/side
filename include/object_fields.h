@@ -1336,5 +1336,10 @@ os16112*/
 #define /*0x110*/ os16110                                       OBJECT_FIELD_S16(0x22, 0)
 #define /*0x112*/ os16112                                       OBJECT_FIELD_S16(0x22, 1)
 
+#define oFadingPlatformScale                     OBJECT_FIELD_F32(0x1B)
+#define oFadingPlatformVanishing                 OBJECT_FIELD_S32(0x1C)
+#define oFadingPlatformTargetScale               OBJECT_FIELD_F32(0x1D)
+#define oFadingPlatformTimerIdle                 OBJECT_FIELD_F32(0x1E)
+
 
 #endif // OBJECT_FIELDS_H

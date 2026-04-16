@@ -21,3 +21,5 @@
 #include "outlines/geo.inc.c"
 #include "outlines2/geo.inc.c"
 #include "flipplane2/geo.inc.c"
+
+#include "fading_platform/geo.inc.c"

@@ -46,13 +46,14 @@ const LevelScript level_bob_entry[] = {
 		WARP_NODE(0xF0, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF1, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(3, LEVEL_BOB, 0x02, 4, WARP_NO_CHECKPOINT),
+		OBJECT(MODEL_FADING_PLATFORM, -1150, 250, -628, 0, 0, 0, 0x00000000, bhvFadingPlatform),
 		OBJECT(MODEL_NONE, 350, 250, -628, 0, 0, 0, 0x00000000, bhvFlipplane),
 		OBJECT(MODEL_NONE, 1375, 250, 122, 0, 0, 0, (1 << 16), bhvFlipplane),
 		MARIO_POS(0x01, 0, 0, 200, 0),
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		STOP_MUSIC(0),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

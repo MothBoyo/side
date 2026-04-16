@@ -1,0 +1,13 @@
+extern const GeoLayout fading_platform_geo[];
+extern u8 fading_platform_FadingPlatform_ci4[];
+extern u8 fading_platform_FadingPlatform_pal_rgba16[];
+extern Vtx fading_platform_root_mesh_layer_1_vtx_0[40];
+extern Gfx fading_platform_root_mesh_layer_1_tri_0[];
+extern Vtx fading_platform_body_mesh_layer_1_vtx_0[24];
+extern Gfx fading_platform_body_mesh_layer_1_tri_0[];
+extern Gfx mat_fading_platform_fading_platform_frame[];
+extern Gfx mat_revert_fading_platform_fading_platform_frame[];
+extern Gfx mat_fading_platform_fading_platform_platform[];
+extern Gfx mat_revert_fading_platform_fading_platform_platform[];
+extern Gfx fading_platform_root_mesh_layer_1[];
+extern Gfx fading_platform_body_mesh_layer_1_with_revert[];

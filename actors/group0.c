@@ -37,3 +37,6 @@
 #include "outlines2/model.inc.c"
 #include "flipplane2/model.inc.c"
 #include "flipplane2/collision.inc.c"
+
+#include "fading_platform/collision.inc.c"
+#include "fading_platform/model.inc.c"

@@ -551,6 +551,9 @@ void bhv_dust_smoke_loop(void);
 void bhv_yoshi_loop(void);
 void bhv_volcano_trap_loop(void);
 void bhv_flipplane_loop(void);
+Gfx *fading_platform_scale(s32 callContext, struct GraphNode *node);
+void fading_platform_init(void);
+void fading_platform_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

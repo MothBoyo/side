@@ -472,7 +472,7 @@
 #define MODEL_OUTLINES                    0x98
 #define MODEL_FLIPPLANE2                  0x99
 #define MODEL_OUTLINES2                   0x9A
-// find me
+#define MODEL_FADING_PLATFORM             0x9B              
 #define MODEL_BURN_SMOKE_UNUSED           0x9C        // burn_smoke_geo - unused & duplicated
 // find me
 #define MODEL_WHITE_PARTICLE_DL           0x9E        // white_particle_dl

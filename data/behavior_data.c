@@ -6082,3 +6082,14 @@ const BehaviorScript bhvFlipplane[] = {
         CALL_NATIVE(bhv_flipplane_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvFadingPlatform[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_FLOAT(oDrawingDistance, 10000),
+    LOAD_COLLISION_DATA(fading_platform_collision),
+    CALL_NATIVE(fading_platform_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(fading_platform_loop),
+    END_LOOP(),
+};

@@ -342,4 +342,7 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "flipplane2/geo_header.h"
 
 #include "flipplane2/collision_header.h"
+
+#include "fading_platform/collision_header.h"
+#include "fading_platform/geo_header.h"
 #endif
