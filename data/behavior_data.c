@@ -6074,4 +6074,11 @@ const BehaviorScript bhvIntroScene[] = {
     END_LOOP(),
 };
 
-
+const BehaviorScript bhvFlipplane[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(flipplane_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_flipplane_loop),
+    END_LOOP(),
+};

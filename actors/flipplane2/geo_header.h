@@ -1,0 +1,15 @@
+extern const GeoLayout flipplane2_geo[];
+extern u8 flipplane2_question_mark_64x64_i4[];
+extern u8 flipplane2_white_gray_gradient_8x128_i8[];
+extern u8 flipplane2_hashigo_i8[];
+extern Vtx flipplane2_visual2_mesh_layer_1_vtx_cull[8];
+extern Vtx flipplane2_visual2_mesh_layer_1_vtx_0[8];
+extern Gfx flipplane2_visual2_mesh_layer_1_tri_0[];
+extern Vtx flipplane2_visual2_mesh_layer_1_vtx_1[32];
+extern Gfx flipplane2_visual2_mesh_layer_1_tri_1[];
+extern Gfx mat_flipplane2_f3dlite_material_layer1[];
+extern Gfx mat_revert_flipplane2_f3dlite_material_layer1[];
+extern Gfx mat_flipplane2_f3dlite_material_001[];
+extern Gfx mat_revert_flipplane2_f3dlite_material_001[];
+extern Gfx flipplane2_visual2_mesh_layer_1[];
+extern Gfx flipplane2_final_revert_mesh_layer_1[];

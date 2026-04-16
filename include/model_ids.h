@@ -468,10 +468,10 @@
 #define MODEL_BURN_SMOKE                  0x94        // burn_smoke_geo
 #define MODEL_SPARKLES                    0x95        // sparkles_geo
 #define MODEL_SMOKE                       0x96        // smoke_geo
-// find me
-// find me
-// find me
-// find me
+#define MODEL_FLIPPLANE                   0x97
+#define MODEL_OUTLINES                    0x98
+#define MODEL_FLIPPLANE2                  0x99
+#define MODEL_OUTLINES2                   0x9A
 // find me
 #define MODEL_BURN_SMOKE_UNUSED           0x9C        // burn_smoke_geo - unused & duplicated
 // find me

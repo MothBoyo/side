@@ -1,0 +1,10 @@
+extern const GeoLayout outlines_geo[];
+extern u8 outlines_outline_red_64x8_ci8[];
+extern u8 outlines_outline_red_64x8_pal_rgba16[];
+extern Vtx outlines_outlines_mesh_layer_4_vtx_cull[8];
+extern Vtx outlines_outlines_mesh_layer_4_vtx_0[24];
+extern Gfx outlines_outlines_mesh_layer_4_tri_0[];
+extern Gfx mat_outlines_f3dlite_material_003[];
+extern Gfx mat_revert_outlines_f3dlite_material_003[];
+extern Gfx outlines_outlines_mesh_layer_4[];
+extern Gfx outlines_final_revert_mesh_layer_4[];

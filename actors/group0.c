@@ -30,3 +30,10 @@
 #include "src/s2d_engine/s2d_config.h"
 #include FONT_C_FILE
 #endif
+
+#include "flipplane/model.inc.c"
+#include "flipplane/collision.inc.c"
+#include "outlines/model.inc.c"
+#include "outlines2/model.inc.c"
+#include "flipplane2/model.inc.c"
+#include "flipplane2/collision.inc.c"

@@ -331,4 +331,15 @@ extern const Gfx white_particle_small_dl_end[];
 extern const Gfx white_particle_small_dl[];
 extern const Gfx white_particle_small_unused_dl[];
 
+#include "flipplane/geo_header.h"
+
+#include "flipplane/collision_header.h"
+
+#include "outlines/geo_header.h"
+
+#include "outlines2/geo_header.h"
+
+#include "flipplane2/geo_header.h"
+
+#include "flipplane2/collision_header.h"
 #endif

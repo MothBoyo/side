@@ -16,3 +16,8 @@
 #include "water_splash/geo.inc.c"
 #include "sparkle_animation/geo.inc.c"
 #include "mario/geo.inc.c"
+
+#include "flipplane/geo.inc.c"
+#include "outlines/geo.inc.c"
+#include "outlines2/geo.inc.c"
+#include "flipplane2/geo.inc.c"
