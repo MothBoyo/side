@@ -345,4 +345,7 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "fading_platform/collision_header.h"
 #include "fading_platform/geo_header.h"
+
+#include "sync_block/geo_header.h"
+#include "sync_block/collision_header.h"
 #endif

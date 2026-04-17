@@ -40,3 +40,6 @@
 
 #include "fading_platform/collision.inc.c"
 #include "fading_platform/model.inc.c"
+
+#include "sync_block/model.inc.c"
+#include "sync_block/collision.inc.c"

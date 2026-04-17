@@ -46,6 +46,7 @@
 #include "seq_ids.h"
 #include "spawn_sound.h"
 #include "behaviors/fading_platform.inc.c"
+#include "behaviors/sync_block.inc.c"
 
 //! TODO: remove static
 

@@ -50,6 +50,8 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_NONE, 350, 250, -628, 0, 0, 0, 0x00000000, bhvFlipplane),
 		OBJECT(MODEL_NONE, 1375, 250, 122, 0, 0, 0, (1 << 16), bhvFlipplane),
 		MARIO_POS(0x01, 0, 0, 200, 0),
+		OBJECT(MODEL_SYNC_BLOCK, 350, 250, -2028, 0, 0, 0, 0x00000000, bhvSyncBlock),
+		OBJECT(MODEL_SYNC_BLOCK, 1375, 250, -1278, 0, 0, 0, (2 << 24), bhvSyncBlock),
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),

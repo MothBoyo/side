@@ -1341,5 +1341,12 @@ os16112*/
 #define oFadingPlatformTargetScale               OBJECT_FIELD_F32(0x1D)
 #define oFadingPlatformTimerIdle                 OBJECT_FIELD_F32(0x1E)
 
+#define oSyncBlockState                          OBJECT_FIELD_S32(0x1B)
+#define oSyncBlockColor                          OBJECT_FIELD_S32(0x1C)
+#define oSyncBlockTimer                          OBJECT_FIELD_F32(0x1D)
+#define oSyncBlockCycle                          OBJECT_FIELD_F32(0x1E)
+#define oSyncBlockTargetBlinkColor               OBJECT_FIELD_S32(0x1F)
+#define oSyncBlockCurrentBlinkColor              OBJECT_FIELD_S32(0x20)
+
 
 #endif // OBJECT_FIELDS_H

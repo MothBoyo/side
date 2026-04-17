@@ -1,0 +1,12 @@
+extern const GeoLayout sync_block_geo[];
+extern u8 sync_block_SyncBlock_i8[];
+extern Vtx sync_block_000_body_mesh_layer_1_vtx_0[96];
+extern Gfx sync_block_000_body_mesh_layer_1_tri_0[];
+extern Vtx sync_block_000_body_mesh_layer_5_vtx_0[24];
+extern Gfx sync_block_000_body_mesh_layer_5_tri_0[];
+extern Gfx mat_sync_block_sync_block_frame[];
+extern Gfx mat_revert_sync_block_sync_block_frame[];
+extern Gfx mat_sync_block_sync_block_block_layer5[];
+extern Gfx mat_revert_sync_block_sync_block_block_layer5[];
+extern Gfx sync_block_000_body_mesh_layer_1_with_revert[];
+extern Gfx sync_block_000_body_mesh_layer_5_with_revert[];

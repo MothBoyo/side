@@ -23,3 +23,5 @@
 #include "flipplane2/geo.inc.c"
 
 #include "fading_platform/geo.inc.c"
+
+#include "sync_block/geo.inc.c"

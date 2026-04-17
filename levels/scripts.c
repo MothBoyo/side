@@ -202,6 +202,7 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_FLIPPLANE2,                flipplane2_geo),
     LOAD_MODEL_FROM_GEO(MODEL_OUTLINES2,               outlines2_geo),
     LOAD_MODEL_FROM_GEO(MODEL_FADING_PLATFORM,      fading_platform_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK,      sync_block_geo),
     RETURN(),
 };
 

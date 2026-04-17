@@ -6093,3 +6093,14 @@ const BehaviorScript bhvFadingPlatform[] = {
         CALL_NATIVE(fading_platform_loop),
     END_LOOP(),
 };
+   
+const BehaviorScript bhvSyncBlock[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO),
+    SET_FLOAT(oDrawingDistance, 10000),
+    LOAD_COLLISION_DATA(sync_block_collision),
+    CALL_NATIVE(sync_block_color_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(sync_block_color_loop),
+    END_LOOP(),
+};

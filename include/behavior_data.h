@@ -542,6 +542,7 @@ extern const BehaviorScript bhvIntroScene[];
 extern const BehaviorScript bhvUnusedFakeStar[];
 extern const BehaviorScript bhvFlipplane[];
 extern const BehaviorScript bhvFadingPlatform[];
+extern const BehaviorScript bhvSyncBlock[];
 
 
 #endif // BEHAVIOR_DATA_H
