@@ -205,6 +205,7 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK,      sync_block_geo),
     LOAD_MODEL_FROM_GEO(MODEL_INTERACTIVE_TABLET,      interactive_tablet_geo),
     LOAD_MODEL_FROM_GEO(MODEL_INTERACTIVE_TABLET_PODIUM,      interactive_tablet_podium_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_NOTEBLOCK,               noteblock_geo),
     RETURN(),
 };
 

@@ -28,3 +28,5 @@
 
 #include "interactive_tablet/geo.inc.c"
 #include "interactive_tablet_podium/geo.inc.c"
+
+#include "noteblock/geo.inc.c"

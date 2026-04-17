@@ -48,3 +48,6 @@
 #include "interactive_tablet/collision.inc.c"
 #include "interactive_tablet_podium/collision.inc.c"
 #include "interactive_tablet_podium/model.inc.c"
+
+#include "noteblock/collision.inc.c"
+#include "noteblock/model.inc.c"

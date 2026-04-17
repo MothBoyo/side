@@ -48,6 +48,7 @@
 #include "behaviors/fading_platform.inc.c"
 #include "behaviors/sync_block.inc.c"
 #include "behaviors/interactive_tablet.inc.c"
+#include "behaviors/mop.inc.c"
 
 //! TODO: remove static
 
