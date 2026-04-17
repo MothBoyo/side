@@ -348,4 +348,9 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "sync_block/geo_header.h"
 #include "sync_block/collision_header.h"
+
+#include "interactive_tablet/geo_header.h"
+#include "interactive_tablet/collision_header.h"
+#include "interactive_tablet_podium/collision_header.h"
+#include "interactive_tablet_podium/geo_header.h"
 #endif

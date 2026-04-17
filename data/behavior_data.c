@@ -6104,3 +6104,27 @@ const BehaviorScript bhvSyncBlock[] = {
         CALL_NATIVE(sync_block_color_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvInteractiveTablet[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO),
+    SET_FLOAT(oDrawingDistance, 10000),
+    LOAD_COLLISION_DATA(interactive_tablet_collision),
+    CALL_NATIVE(interactive_tablet_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(interactive_tablet_loop),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvInteractiveTabletPodium[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_FLOAT(oDrawingDistance, 10000),
+    LOAD_COLLISION_DATA(interactive_tablet_podium_collision),
+    CALL_NATIVE(interactive_tablet_podium_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(interactive_tablet_podium_loop),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};

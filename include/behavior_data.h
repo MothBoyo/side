@@ -543,6 +543,9 @@ extern const BehaviorScript bhvUnusedFakeStar[];
 extern const BehaviorScript bhvFlipplane[];
 extern const BehaviorScript bhvFadingPlatform[];
 extern const BehaviorScript bhvSyncBlock[];
+extern const BehaviorScript bhvInteractiveTablet[];
+extern const BehaviorScript bhvInteractiveTabletPodium[];
+
 
 
 #endif // BEHAVIOR_DATA_H

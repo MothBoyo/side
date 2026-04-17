@@ -43,3 +43,8 @@
 
 #include "sync_block/model.inc.c"
 #include "sync_block/collision.inc.c"
+
+#include "interactive_tablet/model.inc.c"
+#include "interactive_tablet/collision.inc.c"
+#include "interactive_tablet_podium/collision.inc.c"
+#include "interactive_tablet_podium/model.inc.c"

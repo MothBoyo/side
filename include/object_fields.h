@@ -1348,5 +1348,14 @@ os16112*/
 #define oSyncBlockTargetBlinkColor               OBJECT_FIELD_S32(0x1F)
 #define oSyncBlockCurrentBlinkColor              OBJECT_FIELD_S32(0x20)
 
+#define oInteractiveTabletState                  OBJECT_FIELD_S32(0x1B)
+#define oInteractiveTabletIsPodium               OBJECT_FIELD_S32(0x1C)
+#define oInteractiveTabletAssignedPodium         OBJECT_FIELD_OBJ(0x1D)
+#define oInteractiveTabletAssignedTablet         OBJECT_FIELD_OBJ(0x1E)
+#define oInteractiveTabletSetFinal               OBJECT_FIELD_S32(0x1F)
+#define oInteractiveTabletPodiumSpawnStar        OBJECT_FIELD_S32(0x20)
+#define oInteractiveTabletInteractTimer          OBJECT_FIELD_F32(0x21)
+#define oInteractiveTabletCanInteract            OBJECT_FIELD_S32(0x22)
+
 
 #endif // OBJECT_FIELDS_H

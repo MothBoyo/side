@@ -557,6 +557,11 @@ void fading_platform_loop(void);
 Gfx *sync_block_color(s32 callContext, struct GraphNode *node);
 void sync_block_color_init(void);
 void sync_block_color_loop(void);
+Gfx *interactive_tablet_state(s32 callContext, struct GraphNode *node);
+void interactive_tablet_init(void);
+void interactive_tablet_loop(void);
+void interactive_tablet_podium_init(void);
+void interactive_tablet_podium_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

@@ -1,0 +1,8 @@
+extern const GeoLayout interactive_tablet_podium_geo[];
+extern u8 interactive_tablet_podium_interactive_tablet_podium_ci4[];
+extern u8 interactive_tablet_podium_interactive_tablet_podium_pal_rgba16[];
+extern Vtx interactive_tablet_podium_body_mesh_layer_1_vtx_0[96];
+extern Gfx interactive_tablet_podium_body_mesh_layer_1_tri_0[];
+extern Gfx mat_interactive_tablet_podium_interactive_tablet_podium[];
+extern Gfx mat_revert_interactive_tablet_podium_interactive_tablet_podium[];
+extern Gfx interactive_tablet_podium_body_mesh_layer_1_with_revert[];

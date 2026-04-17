@@ -25,3 +25,6 @@
 #include "fading_platform/geo.inc.c"
 
 #include "sync_block/geo.inc.c"
+
+#include "interactive_tablet/geo.inc.c"
+#include "interactive_tablet_podium/geo.inc.c"
