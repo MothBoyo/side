@@ -5,41 +5,7 @@ void bhv_flipplane_loop(void) {
     switch (o->oAction) {
         case 0:
             // Rising edge detection then switch the state
-            if (((gMarioState->action == ACT_JUMP)
-                 && ((gMarioState->action == ACT_JUMP) || (gMarioState->prevAction == ACT_JUMP)))
-                || ((gMarioState->action == ACT_DOUBLE_JUMP)
-                    && ((gMarioState->action == ACT_DOUBLE_JUMP)
-                        || (gMarioState->prevAction == ACT_DOUBLE_JUMP)))
-                || ((gMarioState->action == ACT_TRIPLE_JUMP)
-                    && ((gMarioState->action == ACT_TRIPLE_JUMP)
-                        || (gMarioState->prevAction == ACT_TRIPLE_JUMP)))
-                || ((gMarioState->action == ACT_BACKFLIP)
-                    && ((gMarioState->action == ACT_BACKFLIP)
-                        || (gMarioState->prevAction == ACT_BACKFLIP)))
-                || ((gMarioState->action == ACT_LONG_JUMP)
-                    && ((gMarioState->action == ACT_LONG_JUMP)
-                        || (gMarioState->prevAction == ACT_LONG_JUMP)))
-                || ((gMarioState->action == ACT_STEEP_JUMP)
-                    && ((gMarioState->action == ACT_STEEP_JUMP)
-                        || (gMarioState->prevAction == ACT_STEEP_JUMP)))
-                || ((gMarioState->action == ACT_SIDE_FLIP)
-                    && ((gMarioState->action == ACT_SIDE_FLIP)
-                        || (gMarioState->prevAction == ACT_SIDE_FLIP)))
-                || ((gMarioState->action == ACT_WATER_JUMP)
-                    && ((gMarioState->action == ACT_WATER_JUMP)
-                        || (gMarioState->prevAction == ACT_WATER_JUMP)))
-                || ((gMarioState->action == ACT_TOP_OF_POLE_JUMP)
-                    && ((gMarioState->action == ACT_TOP_OF_POLE_JUMP)
-                        || (gMarioState->prevAction == ACT_TOP_OF_POLE_JUMP)))
-                || ((gMarioState->action == ACT_FLYING_TRIPLE_JUMP)
-                    && ((gMarioState->action == ACT_FLYING_TRIPLE_JUMP)
-                        || (gMarioState->prevAction == ACT_FLYING_TRIPLE_JUMP)))
-                || ((gMarioState->action == ACT_RIDING_SHELL_JUMP)
-                    && ((gMarioState->action == ACT_RIDING_SHELL_JUMP)
-                        || (gMarioState->prevAction == ACT_RIDING_SHELL_JUMP)))
-                || ((gMarioState->action == ACT_SPECIAL_TRIPLE_JUMP)
-                    && ((gMarioState->action == ACT_SPECIAL_TRIPLE_JUMP)
-                        || (gMarioState->prevAction == ACT_SPECIAL_TRIPLE_JUMP)))) {
+            if (((gMarioState->prevAction&ACT_GROUP_MASK)!=ACT_GROUP_AIRBORNE) && ((gMarioState->action& ACT_GROUP_MASK)==ACT_GROUP_AIRBORNE)) {
                 o->oAction = 1;
             } else {
                 o->oAction = 0;
@@ -49,7 +15,7 @@ void bhv_flipplane_loop(void) {
         case 1:
             // Rising edge detection then switch the state
             if ((gMarioState->action != gMarioState->prevAction)
-                && ((gMarioState->action == ACT_JUMP) || (gMarioState->prevAction == ACT_JUMP))) {
+                && (((gMarioState->prevAction&ACT_GROUP_MASK)!=ACT_GROUP_AIRBORNE) && ((gMarioState->action& ACT_GROUP_MASK)==ACT_GROUP_AIRBORNE))) {
                 o->oAction = 1;
             } else {
                 o->oAction = 2;
@@ -58,8 +24,8 @@ void bhv_flipplane_loop(void) {
             break;
         case 2:
             // Rising edge detection then switch the state
-            if ((gMarioState->action == ACT_JUMP)
-                && ((gMarioState->action == ACT_JUMP) || (gMarioState->prevAction == ACT_JUMP))) {
+            if (((gMarioState->prevAction&ACT_GROUP_MASK)!=ACT_GROUP_AIRBORNE) && ((gMarioState->action& ACT_GROUP_MASK)==ACT_GROUP_AIRBORNE)
+                && ((gMarioState->prevAction&ACT_GROUP_MASK)!=ACT_GROUP_AIRBORNE) && ((gMarioState->action& ACT_GROUP_MASK)==ACT_GROUP_AIRBORNE)) {
                 o->oAction = 3;
             } else {
                 o->oAction = 2;
@@ -69,7 +35,7 @@ void bhv_flipplane_loop(void) {
         case 3:
             // Rising edge detection then switch the state
             if (gMarioState->action != gMarioState->prevAction
-                && ((gMarioState->action == ACT_JUMP) || (gMarioState->prevAction == ACT_JUMP))) {
+                && ((gMarioState->prevAction&ACT_GROUP_MASK)!=ACT_GROUP_AIRBORNE) && ((gMarioState->action& ACT_GROUP_MASK)==ACT_GROUP_AIRBORNE)) {
                 o->oAction = 3;
             } else {
                 o->oAction = 0;
