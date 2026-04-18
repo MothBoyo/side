@@ -51,3 +51,10 @@
 
 #include "noteblock/collision.inc.c"
 #include "noteblock/model.inc.c"
+
+#include "onoffcol/collision.inc.c"
+#include "onoffswitch/model.inc.c"
+#include "onoffsolid/collision.inc.c"
+#include "onoffsolid/model.inc.c"
+#include "onoffhollow/model.inc.c"
+#include "onoffexclamation/model.inc.c"

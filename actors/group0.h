@@ -356,4 +356,10 @@ extern const Gfx white_particle_small_unused_dl[];
 
 #include "noteblock/geo_header.h"
 #include "noteblock/collision_header.h"
+
+#include "onoffswitch/geo_header.h"
+#include "onoffsolid/collision_header.h"
+#include "onoffsolid/geo_header.h"
+#include "onoffhollow/geo_header.h"
+#include "onoffexclamation/geo_header.h"
 #endif

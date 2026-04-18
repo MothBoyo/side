@@ -546,6 +546,8 @@ extern const BehaviorScript bhvSyncBlock[];
 extern const BehaviorScript bhvInteractiveTablet[];
 extern const BehaviorScript bhvInteractiveTabletPodium[];
 extern const BehaviorScript bhvNoteblock[];
+extern const BehaviorScript bhvOnOffBlock[];
+extern const BehaviorScript bhvOnOffButton[];
 
 
 #endif // BEHAVIOR_DATA_H

@@ -30,3 +30,8 @@
 #include "interactive_tablet_podium/geo.inc.c"
 
 #include "noteblock/geo.inc.c"
+
+#include "onoffswitch/geo.inc.c"
+#include "onoffsolid/geo.inc.c"
+#include "onoffhollow/geo.inc.c"
+#include "onoffexclamation/geo.inc.c"
