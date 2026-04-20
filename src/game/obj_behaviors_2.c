@@ -49,6 +49,7 @@
 #include "behaviors/sync_block.inc.c"
 #include "behaviors/interactive_tablet.inc.c"
 #include "behaviors/mop.inc.c"
+#include "behaviors/custom_exclamation_box.inc.c"
 
 //! TODO: remove static
 

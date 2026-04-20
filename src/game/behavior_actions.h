@@ -562,6 +562,7 @@ void interactive_tablet_init(void);
 void interactive_tablet_loop(void);
 void interactive_tablet_podium_init(void);
 void interactive_tablet_podium_loop(void);
+void bhv_custom_exclamation_box_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 
