@@ -35,3 +35,6 @@
 #include "onoffsolid/geo.inc.c"
 #include "onoffhollow/geo.inc.c"
 #include "onoffexclamation/geo.inc.c"
+
+#include "silver_star_podium/geo.inc.c"
+#include "silver_star/geo.inc.c"

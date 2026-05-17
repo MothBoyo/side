@@ -549,6 +549,8 @@ extern const BehaviorScript bhvNoteblock[];
 extern const BehaviorScript bhvOnOffBlock[];
 extern const BehaviorScript bhvOnOffButton[];
 extern const BehaviorScript bhvCustomExclamationBox[];
+extern const BehaviorScript bhvSilverStar[];
+extern const BehaviorScript bhvSilverStarPodium[];
 
 
 #endif // BEHAVIOR_DATA_H

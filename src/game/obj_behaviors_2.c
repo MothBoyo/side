@@ -50,6 +50,7 @@
 #include "behaviors/interactive_tablet.inc.c"
 #include "behaviors/mop.inc.c"
 #include "behaviors/custom_exclamation_box.inc.c"
+#include "behaviors/silver_star.inc.c"
 
 //! TODO: remove static
 

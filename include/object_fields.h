@@ -1357,5 +1357,14 @@ os16112*/
 #define oInteractiveTabletInteractTimer          OBJECT_FIELD_F32(0x21)
 #define oInteractiveTabletCanInteract            OBJECT_FIELD_S32(0x22)
 
+#define oSilverStarScale                         OBJECT_FIELD_F32(0x1B)
+#define oSilverStarTargetScale                   OBJECT_FIELD_F32(0x1C)
+#define oSilverStarAssignedPodium                OBJECT_FIELD_OBJ(0x1D)
+#define oSilverStarPodiumAssignedSilverStar      OBJECT_FIELD_OBJ(0x1E)
+#define oSilverStarNum                           OBJECT_FIELD_S32(0x1F)
+#define oSilverStarAccel                         OBJECT_FIELD_F32(0x20)
+#define oSilverStarCollected                     OBJECT_FIELD_S32(0x21)
+#define oSilverStarSpawnStar                     OBJECT_FIELD_S32(0x22)
+
 
 #endif // OBJECT_FIELDS_H

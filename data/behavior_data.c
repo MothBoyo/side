@@ -6184,3 +6184,25 @@ const BehaviorScript bhvCustomExclamationBox[] = {
         CALL_NATIVE(bhv_custom_exclamation_box_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvSilverStar[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO),
+    SET_FLOAT(oDrawingDistance, 10000),
+    LOAD_ANIMATIONS(oAnimations, silver_star_anims),
+    ANIMATE(0),
+    CALL_NATIVE(silver_star_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(silver_star_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvSilverStarPodium[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_FLOAT(oDrawingDistance, 10000),
+    CALL_NATIVE(silver_star_podium_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(silver_star_podium_loop),
+    END_LOOP(),
+};

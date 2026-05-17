@@ -1,0 +1,13 @@
+extern const GeoLayout silver_star_geo[];
+extern u8 silver_star_CamStand_i8[];
+extern u8 silver_star_LightBeamSmall_ia8[];
+extern Vtx silver_star_000_body_mesh_layer_1_vtx_0[122];
+extern Gfx silver_star_000_body_mesh_layer_1_tri_0[];
+extern Vtx silver_star_billboard_mesh_layer_5_vtx_0[25];
+extern Gfx silver_star_billboard_mesh_layer_5_tri_0[];
+extern Gfx mat_silver_star_silver_star[];
+extern Gfx mat_revert_silver_star_silver_star[];
+extern Gfx mat_silver_star_silver_star_beams[];
+extern Gfx mat_revert_silver_star_silver_star_beams[];
+extern Gfx silver_star_000_body_mesh_layer_1_with_revert[];
+extern Gfx silver_star_billboard_mesh_layer_5_with_revert[];

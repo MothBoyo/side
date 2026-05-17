@@ -58,3 +58,8 @@
 #include "onoffsolid/model.inc.c"
 #include "onoffhollow/model.inc.c"
 #include "onoffexclamation/model.inc.c"
+
+#include "silver_star_podium/model.inc.c"
+#include "silver_star/model.inc.c"
+#include "silver_star/anims/data.inc.c"
+#include "silver_star/anims/table.inc.c"
