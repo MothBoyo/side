@@ -63,3 +63,7 @@
 #include "silver_star/model.inc.c"
 #include "silver_star/anims/data.inc.c"
 #include "silver_star/anims/table.inc.c"
+
+#include "flipswap_edge/model.inc.c"
+#include "flipswap_inside/model.inc.c"
+#include "flipswap_inside/collision.inc.c"

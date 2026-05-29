@@ -366,4 +366,10 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "silver_star_podium/geo_header.h"
 #include "silver_star/geo_header.h"
 #include "silver_star/anim_header.h"
+
+#include "flipswap_edge/geo_header.h"
+
+#include "flipswap_inside/geo_header.h"
+
+#include "flipswap_inside/collision_header.h"
 #endif

@@ -38,3 +38,6 @@
 
 #include "silver_star_podium/geo.inc.c"
 #include "silver_star/geo.inc.c"
+
+#include "flipswap_edge/geo.inc.c"
+#include "flipswap_inside/geo.inc.c"

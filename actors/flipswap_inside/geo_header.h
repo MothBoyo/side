@@ -1,0 +1,14 @@
+extern const GeoLayout flipswap_inside_geo[];
+extern u8 flipswap_inside_cs_metal05_spc_i8[];
+extern u8 flipswap_inside_Material30_i8[];
+extern Vtx flipswap_inside_inside_mesh_layer_1_vtx_cull[8];
+extern Vtx flipswap_inside_inside_mesh_layer_1_vtx_0[20];
+extern Gfx flipswap_inside_inside_mesh_layer_1_tri_0[];
+extern Vtx flipswap_inside_inside_mesh_layer_1_vtx_1[59];
+extern Gfx flipswap_inside_inside_mesh_layer_1_tri_1[];
+extern Gfx mat_flipswap_inside_metal[];
+extern Gfx mat_revert_flipswap_inside_metal[];
+extern Gfx mat_flipswap_inside_shiny[];
+extern Gfx mat_revert_flipswap_inside_shiny[];
+extern Gfx flipswap_inside_inside_mesh_layer_1[];
+extern Gfx flipswap_inside_final_revert_mesh_layer_1[];
