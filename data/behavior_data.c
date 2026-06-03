@@ -6222,3 +6222,11 @@ const BehaviorScript bhvFlipswapEdge[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     BREAK(),
 };
+
+const BehaviorScript bhvTriggerByEnemiesKilled[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    SET_INT(oHealth, 0),
+    BEGIN_LOOP(),
+        CALL_NATIVE(trigger_by_bparam4_loop),
+    END_LOOP(),
+};

@@ -569,6 +569,7 @@ void silver_star_loop(void);
 void silver_star_podium_init(void);
 void silver_star_podium_loop(void);
 void bhv_flipswap_loop(void);
+void trigger_by_bparam4_loop (void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

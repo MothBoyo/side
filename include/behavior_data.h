@@ -553,6 +553,7 @@ extern const BehaviorScript bhvSilverStar[];
 extern const BehaviorScript bhvSilverStarPodium[];
 extern const BehaviorScript bhvFlipswap[];
 extern const BehaviorScript bhvFlipswapEdge[];
+extern const BehaviorScript bhvTriggerByEnemiesKilled[];
 
 
 #endif // BEHAVIOR_DATA_H
