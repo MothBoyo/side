@@ -214,6 +214,8 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SILVER_STAR_PODIUM,      silver_star_podium_geo),
     LOAD_MODEL_FROM_GEO(MODEL_FLIPSWAP,                flipswap_inside_geo),
     LOAD_MODEL_FROM_GEO(MODEL_FLIPSWAP_EDGE,           flipswap_edge_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_GREEN_PLATFORM,      green_platform_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_GREEN_PLATFORM_TRACK,      green_platform_track_geo),
     RETURN(),
 };
 

@@ -372,4 +372,8 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "flipswap_inside/geo_header.h"
 
 #include "flipswap_inside/collision_header.h"
+
+#include "green_platform/geo_header.h"
+#include "green_platform/collision_header.h"
+#include "green_platform_track/geo_header.h"
 #endif

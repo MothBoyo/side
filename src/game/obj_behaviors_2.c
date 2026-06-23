@@ -51,6 +51,7 @@
 #include "behaviors/mop.inc.c"
 #include "behaviors/custom_exclamation_box.inc.c"
 #include "behaviors/silver_star.inc.c"
+#include "behaviors/green_platform.inc.c"
 
 //! TODO: remove static
 

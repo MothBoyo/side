@@ -1366,5 +1366,10 @@ os16112*/
 #define oSilverStarCollected                     OBJECT_FIELD_S32(0x21)
 #define oSilverStarSpawnStar                     OBJECT_FIELD_S32(0x22)
 
+#define oGreenPlatformRadius         OBJECT_FIELD_S32(0x1B)
+#define oGreenPlatformSpeed          OBJECT_FIELD_S32(0x1C)
+#define oGreenPlatformAmount         OBJECT_FIELD_S32(0x1D)
+#define oGreenPlatformID             OBJECT_FIELD_S32(0x1E)
+
 
 #endif // OBJECT_FIELDS_H

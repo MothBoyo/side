@@ -2710,4 +2710,7 @@ enum gCutsceneObjSpawns {
     CUTSCENE_OBJ_2_END_BIRDS_1
 };
 
+#define GREEN_PLATFORM_CIRCULAR_HORIZONTAL               0x0
+#define GREEN_PLATFORM_CIRCULAR_VERTICAL                 0x1
+
 #endif // OBJECT_CONSTANTS_H

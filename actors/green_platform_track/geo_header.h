@@ -1,0 +1,6 @@
+extern const GeoLayout green_platform_track_geo[];
+extern Vtx green_platform_track_scale_mesh_layer_1_vtx_0[160];
+extern Gfx green_platform_track_scale_mesh_layer_1_tri_0[];
+extern Gfx mat_green_platform_track_green_platform_Circlar_track_mat[];
+extern Gfx mat_revert_green_platform_track_green_platform_Circlar_track_mat[];
+extern Gfx green_platform_track_scale_mesh_layer_1_with_revert[];

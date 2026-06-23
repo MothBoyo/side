@@ -67,3 +67,7 @@
 #include "flipswap_edge/model.inc.c"
 #include "flipswap_inside/model.inc.c"
 #include "flipswap_inside/collision.inc.c"
+
+#include "green_platform/model.inc.c"
+#include "green_platform/collision.inc.c"
+#include "green_platform_track/model.inc.c"

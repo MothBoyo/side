@@ -6230,3 +6230,24 @@ const BehaviorScript bhvTriggerByEnemiesKilled[] = {
         CALL_NATIVE(trigger_by_bparam4_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvGreenPlatformCircularManager[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    SET_FLOAT(oDrawingDistance, 10000),
+    CALL_NATIVE(green_platform_manager_init),
+    BREAK(),
+};
+
+const BehaviorScript bhvGreenPlatformCircular[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(green_platform_collision),
+    SET_FLOAT(oDrawingDistance, 10000),
+    SET_HOME(),
+    CALL_NATIVE(green_platform_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(green_platform_loop),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};

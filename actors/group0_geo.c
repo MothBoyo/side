@@ -41,3 +41,7 @@
 
 #include "flipswap_edge/geo.inc.c"
 #include "flipswap_inside/geo.inc.c"
+
+#include "green_platform/geo.inc.c"
+#include "green_platform_track/geo.inc.c"
+

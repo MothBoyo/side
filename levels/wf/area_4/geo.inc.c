@@ -1,13 +1,17 @@
 #include "src/game/envfx_snow.h"
 
-const GeoLayout jrb_area_2_geo[] = {
+const GeoLayout wf_area_4_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, jrb_dl_Plane_001_mesh_layer_1_with_revert),
+		GEO_ASM(0, geo_render_mirror_mario),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 4350, 0, -2165, 0, 90, 0, wf_dl_VISUAL_mesh_layer_1_with_revert),
+		GEO_OPEN_NODE(),
+			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, wf_dl_VISUAL_mesh_layer_5_with_revert),
+		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout jrb_area_2[] = {
+const GeoLayout wf_area_4[] = {
 	GEO_NODE_SCREEN_AREA(10, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
 	GEO_OPEN_NODE(),
 		GEO_ZBUFFER(0),
@@ -21,9 +25,9 @@ const GeoLayout jrb_area_2[] = {
 		GEO_OPEN_NODE(),
 			GEO_CAMERA_FRUSTUM_WITH_FUNC(45.0000, 100, 30000, geo_camera_fov),
 			GEO_OPEN_NODE(),
-				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 0, -4500, 0, 0, -4600, 0, geo_camera_main),
+				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 150, 0, 0, 150, -100, 0, geo_camera_main),
 				GEO_OPEN_NODE(),
-					GEO_BRANCH(1, jrb_area_2_geo),
+					GEO_BRANCH(1, wf_area_4_geo),
 					GEO_RENDER_OBJ(),
 					GEO_ASM(ENVFX_MODE_NONE, geo_envfx_main),
 				GEO_CLOSE_NODE(),

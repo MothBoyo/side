@@ -3,8 +3,10 @@
 const GeoLayout bob_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_dl_DEATH_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 728, 1798, 2495, bob_dl_Vert_mesh_layer_1_with_revert),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 3138, 1798, 379, bob_dl_VISUAL_002_mesh_layer_1_with_revert),
+		GEO_OPEN_NODE(),
+			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, bob_dl_VISUAL_002_mesh_layer_5_with_revert),
+		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -15,7 +17,7 @@ const GeoLayout bob_area_1[] = {
 		GEO_OPEN_NODE(),
 			GEO_NODE_ORTHO(100.0000),
 			GEO_OPEN_NODE(),
-				GEO_BACKGROUND(BACKGROUND_OCEAN_SKY, geo_skybox_main),
+				GEO_BACKGROUND_COLOR(0x8EA3),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_ZBUFFER(1),

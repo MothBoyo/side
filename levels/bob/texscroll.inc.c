@@ -19,6 +19,27 @@ void scroll_bob_dl_VISUAL_mesh_layer_5_vtx_1() {
 	currentY += deltaY;
 }
 
+void scroll_gfx_mat_bob_dl_QUICKSAND() {
+	Gfx *mat = segmented_to_virtual(mat_bob_dl_QUICKSAND);
+
+	shift_s_down(mat, 9, PACK_TILESIZE(0, 1));
+
+};
+
+void scroll_gfx_mat_bob_dl_SAND_QUICKSAND_layer1() {
+	Gfx *mat = segmented_to_virtual(mat_bob_dl_SAND_QUICKSAND_layer1);
+
+	shift_s_down(mat, 11, PACK_TILESIZE(0, 1));
+
+};
+
+void scroll_gfx_mat_bob_dl_QUICKSAND_ROCK_layer1() {
+	Gfx *mat = segmented_to_virtual(mat_bob_dl_QUICKSAND_ROCK_layer1);
+
+	shift_s_down(mat, 11, PACK_TILESIZE(0, 1));
+
+};
+
 void scroll_gfx_mat_bob_dl_SAND_layer1() {
 	Gfx *mat = segmented_to_virtual(mat_bob_dl_SAND_layer1);
 
@@ -48,6 +69,9 @@ void scroll_gfx_mat_bob_dl_LAVA_layer1() {
 
 void scroll_bob() {
 	scroll_bob_dl_VISUAL_mesh_layer_5_vtx_1();
+	scroll_gfx_mat_bob_dl_QUICKSAND();
+	scroll_gfx_mat_bob_dl_SAND_QUICKSAND_layer1();
+	scroll_gfx_mat_bob_dl_QUICKSAND_ROCK_layer1();
 	scroll_gfx_mat_bob_dl_SAND_layer1();
 	scroll_gfx_mat_bob_dl_SAND__FADE_OUT__layer5();
 	scroll_gfx_mat_bob_dl_LAVA_layer1();

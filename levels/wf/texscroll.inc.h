@@ -1,0 +1,12 @@
+extern void scroll_wf_dl_VIS_mesh_layer_1_vtx_3();
+extern void scroll_wf_dl_VIS_mesh_layer_1_vtx_8();
+extern void scroll_wf_dl_VIS_2_mesh_layer_1_vtx_0();
+extern void scroll_wf_dl_VIS_2_mesh_layer_1_vtx_5();
+extern void scroll_wf_dl_VIS_2_mesh_layer_1_vtx_7();
+extern void scroll_wf_dl_VIS_2_mesh_layer_5_vtx_0();
+extern void scroll_wf_dl_VIS_1_mesh_layer_1_vtx_4();
+extern void scroll_wf_dl_VIS_1_mesh_layer_5_vtx_0();
+extern void scroll_gfx_mat_wf_dl_METAL_FLOOR_2_layer1();
+extern void scroll_gfx_mat_wf_dl_MAGIC_PLATFORM_layer1();
+extern void scroll_gfx_mat_wf_dl_ACID_layer1();
+extern void scroll_wf();
