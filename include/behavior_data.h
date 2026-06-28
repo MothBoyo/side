@@ -556,6 +556,7 @@ extern const BehaviorScript bhvFlipswapEdge[];
 extern const BehaviorScript bhvTriggerByEnemiesKilled[];
 extern const BehaviorScript bhvGreenPlatformCircularManager[];
 extern const BehaviorScript bhvGreenPlatformCircular[];
+extern const BehaviorScript bhvCountdownTimer[];
 
 
 #endif // BEHAVIOR_DATA_H

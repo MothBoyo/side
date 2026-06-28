@@ -574,6 +574,8 @@ void green_platform_manager_init(void);
 void bhv_green_platform_manager_loop(void);
 void green_platform_init(void);
 void green_platform_loop(void);
+void bhv_countdown_timer_loop(void);
+void bhv_countdown_timer_init(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

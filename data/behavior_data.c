@@ -6251,3 +6251,13 @@ const BehaviorScript bhvGreenPlatformCircular[] = {
         CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
+
+const BehaviorScript bhvCountdownTimer[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    CALL_NATIVE(bhv_countdown_timer_init),
+    SET_HITBOX( 200,  200),
+    SET_INT(oIntangibleTimer, 0),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_countdown_timer_loop),
+    END_LOOP(),
+};

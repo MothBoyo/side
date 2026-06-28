@@ -3,8 +3,9 @@
 const GeoLayout bitfs_area_2_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, bitfs_dl_COLLISION_001_mesh_layer_1),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, bitfs_dl_DEATH_001_mesh_layer_1_with_revert),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, bitfs_dl_VISUAL_001_mesh_layer_1_with_revert),
+		GEO_TRANSLATE_NODE(LAYER_OPAQUE, 5800, 5450, 0),
+		GEO_TRANSLATE_NODE(LAYER_OPAQUE, -6000, -7500, 0),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
