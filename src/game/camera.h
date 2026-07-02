@@ -120,7 +120,8 @@ enum CameraModes {
     /*14*/ CAMERA_MODE_8_DIRECTIONS, // AKA Parallel Camera, Bowser Courses & Rainbow Ride
     /*15*/ CAMERA_MODE_0F,
     /*16*/ CAMERA_MODE_FREE_ROAM,
-    /*17*/ CAMERA_MODE_SPIRAL_STAIRS
+    /*17*/ CAMERA_MODE_SPIRAL_STAIRS,
+    /*18*/ CAMERA_MODE_STATIC //custom static camera and //custom 2d camera
 };
 
 enum CameraMovementFlags {
@@ -804,5 +805,13 @@ void set_fov_shake_from_point_preset(u8 preset, f32 posX, f32 posY, f32 posZ);
 void obj_rotate_towards_point(struct Object *obj, Vec3f point, s16 pitchOff, s16 yawOff, s16 pitchDiv, s16 yawDiv);
 
 Gfx *geo_camera_fov(s32 callContext, struct GraphNode *g, UNUSED void *context);
+
+
+//-----------CUSTOM FUNCTIONS-----------
+
+//custom static camera //custom 2d camera
+extern Vec3f sStaticCamPos;
+extern Vec3f sStaticCamFocus;
+void mode_static_camera(struct Camera *c);
 
 #endif // CAMERA_H

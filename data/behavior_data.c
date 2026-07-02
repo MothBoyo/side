@@ -6261,3 +6261,22 @@ const BehaviorScript bhvCountdownTimer[] = {
         CALL_NATIVE(bhv_countdown_timer_loop),
     END_LOOP(),
 };
+
+//custom static camera
+//2D camera and static camera
+const BehaviorScript bhv2dCamera[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_2d_camera_loop),
+    END_LOOP(),
+};
+
+//2D mode, locks mario in Z axis
+const BehaviorScript bhv2dMode[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_2d_mode_loop),
+    END_LOOP(),
+};

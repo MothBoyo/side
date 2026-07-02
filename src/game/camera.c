@@ -2715,6 +2715,13 @@ void transition_to_camera_mode(struct Camera *c, s16 newMode, s16 numFrames) {
  * @param frames number of frames the transition should last, only used when entering C_UP
  */
 void set_camera_mode(struct Camera *c, s16 mode, s16 frames) {
+
+    //custom static camera //custom 2d camera
+    //BUGFIX2 avoid changes in general lol
+    if (c->mode == CAMERA_MODE_STATIC) {
+        return;
+    }
+
     struct LinearTransitionPoint *start = &sModeInfo.transitionStart;
     struct LinearTransitionPoint *end = &sModeInfo.transitionEnd;
 
@@ -2881,7 +2888,9 @@ void update_camera(struct Camera *c) {
         && gCurrentArea->camera->mode != CAMERA_MODE_INSIDE_CANNON) {
         // Only process R_TRIG if 'fixed' is not selected in the menu
         if (cam_select_alt_mode(CAM_SELECTION_NONE) == CAM_SELECTION_MARIO) {
-            if (gPlayer1Controller->buttonPressed & R_TRIG) {
+            //custom static camera //custom 2d camera
+            //this prevents the change if the mode is static or 2d BUGFIX1
+            if ((gPlayer1Controller->buttonPressed & R_TRIG) && !(c->mode == CAMERA_MODE_STATIC)) {
                 if (set_cam_angle(0) == CAM_ANGLE_LAKITU) {
                     set_cam_angle(CAM_ANGLE_MARIO);
                 } else {
@@ -3023,6 +3032,12 @@ void update_camera(struct Camera *c) {
                 case CAMERA_MODE_SPIRAL_STAIRS:
                     mode_spiral_stairs_camera(c);
                     break;
+
+                //custom static camera //custom 2d camera    
+                case CAMERA_MODE_STATIC:
+                    mode_static_camera(c);
+                    break;
+
             }
         }
     }
@@ -4779,6 +4794,7 @@ s32 determine_dance_cutscene(UNUSED struct Camera *c) {
 #ifdef NON_STOP_STARS
     return CUTSCENE_DANCE_DEFAULT;
 #else
+
     u8 cutscene = CUTSCENE_NONE;
     u8 cutsceneIndex = 0;
     u8 starIndex = (gLastCompletedStarNum - 1) / 2;
@@ -5859,9 +5875,7 @@ struct CameraTrigger sCamSL[] = {
  * tunnel. Both sides achieve their effect by editing the camera yaw.
  */
 struct CameraTrigger sCamTHI[] = {
-    { 1, cam_thi_move_cam_through_tunnel, -4609, -2969, 6448, 100, 300, 300, 0 },
-    { 1, cam_thi_look_through_tunnel,     -4809, -2969, 6448, 100, 300, 300, 0 },
-    NULL_TRIGGER
+	NULL_TRIGGER
 };
 
 /**
@@ -5869,13 +5883,7 @@ struct CameraTrigger sCamTHI[] = {
  * start the cutscene for entering the CotMC pool.
  */
 struct CameraTrigger sCamHMC[] = {
-    { 1, cam_hmc_enter_maze, 1996, 102, 0, 205, 100, 205, 0 },
-    { 1, cam_castle_hmc_start_pool_cutscene, 3350, -4689, 4800, 600, 50, 600, 0 },
-    { 1, cam_hmc_elevator_black_hole, -3278, 1236, 1379, 358, 200, 358, 0 },
-    { 1, cam_hmc_elevator_maze_emergency_exit, -2816, 2055, -2560, 358, 200, 358, 0 },
-    { 1, cam_hmc_elevator_lake, -3532, 1543, -7040, 358, 200, 358, 0 },
-    { 1, cam_hmc_elevator_maze, -972, 1543, -7347, 358, 200, 358, 0 },
-    NULL_TRIGGER
+	NULL_TRIGGER
 };
 
 /**
@@ -6060,16 +6068,25 @@ struct CameraTrigger sCamBBH[] = {
  *
  * Each table is terminated with NULL_TRIGGER
  */
-struct CameraTrigger sCamJRB[] = {
-	NULL_TRIGGER
-};
 struct CameraTrigger sCamWF[] = {
 	NULL_TRIGGER
 };
-struct CameraTrigger sCamBitFS[] = {
+struct CameraTrigger sCamTTM[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamJRB[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamLLL[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamDDD[] = {
 	NULL_TRIGGER
 };
 struct CameraTrigger sCamBitDW[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamBitFS[] = {
 	NULL_TRIGGER
 };
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
@@ -10409,17 +10426,17 @@ u8 sDanceCutsceneIndexTable[][4] = {
 u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // BBH            | CCM
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // CASTLE_INSIDE  | HMC
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 1, 0), // SSL            | BOB
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 1, 0), // BBH            | CCM
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // CASTLE_INSIDE  | HMC
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // CASTLE_GROUNDS | BITDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // VCUTM          | BITFS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // SA             | BITS
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // LLL            | DDD
-	ZOOMOUT_AREA_MASK(1, 1, 1, 1, 0, 0, 0, 0), // WF             | ENDING
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // LLL            | DDD
+	ZOOMOUT_AREA_MASK(1, 1, 1, 0, 0, 0, 0, 0), // WF             | ENDING
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // COURTYARD      | PSS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COTMC          | TOTWC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // BOWSER_1       | WMOTR
@@ -11128,6 +11145,50 @@ void obj_rotate_towards_point(struct Object *obj, Vec3f point, s16 pitchOff, s16
     obj->oMoveAnglePitch = approach_s16_asymptotic(obj->oMoveAnglePitch, pitchOff - pitch, pitchDiv);
     obj->oMoveAngleYaw = approach_s16_asymptotic(obj->oMoveAngleYaw, yaw + yawOff, yawDiv);
 }
+
+
+
+//-----------CUSTOM FUNCTIONS-----------
+
+//custom static camera //custom 2d camera
+//CAMERA_MODE_STATIC
+/*
+Fixed Pos and focus, defined by the behavior "bhvStaticCamera" the object is the focus, that defines yaw and pitch
+
+bugs:
+
+BUGS FIXED
+-It no longer allows to change to mario cam.                                          BUGFIX1
+
+-when entering water body, debug mode or flying, it changes the camera                  BUGFIX2
+-when exition water body, debug mode or flying, it crashes                              BUGFIX2
+  
+-angles works now!!!!
+*/
+
+Vec3f sStaticCamPos   = { 0.0f, 0.0f, 0.0f };
+Vec3f sStaticCamFocus = { 0.0f, 0.0f, 0.0f };
+
+void mode_static_camera(struct Camera *c) {
+    //force the C buttons to do nothing
+    gCameraMovementFlags &= ~(CAM_MOVE_C_UP_MODE | CAM_MOVE_ENTERED_ROTATE_SURFACE |
+                              CAM_MOVE_ROTATE_LEFT | CAM_MOVE_ROTATE_RIGHT |
+                              CAM_MOVE_ZOOMED_OUT | CAM_MOVE_RETURN_TO_MIDDLE |
+                              CAM_MOVE_INIT_CAMERA);
+                          
+    vec3f_copy(c->pos,   sStaticCamPos);
+    vec3f_copy(c->focus, sStaticCamFocus);
+
+    c->nextYaw = calculate_yaw(c->focus, c->pos);
+    c->yaw = c->nextYaw;
+
+    sStatusFlags &= ~CAM_FLAG_SMOOTH_MOVEMENT;
+    sStatusFlags |=  CAM_FLAG_BLOCK_SMOOTH_MOVEMENT;
+}
+
+
+
+
 
 #include "behaviors/intro_peach.inc.c"
 #include "behaviors/intro_lakitu.inc.c"
