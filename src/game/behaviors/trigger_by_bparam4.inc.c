@@ -94,26 +94,7 @@ void trigger_by_bparam4_loop (void) {
         }
 
         if (o->oBehParams2ndByte == TRIG_SPAWN_PLATFORMS_COURSE1) {
-            //example of specific thing that needs to be hardcoded
-            if (o->oTimer == 1) {
-                spawn_object_relative(0, 0, 0, 0, o, MODEL_METAL_BOX, bhvPushableMetalBox);  //MODEL_METAL_BOX
-                cur_obj_play_sound_1(SOUND_OBJ2_SWOOP_WAKE_UP);
-
-                }
-            if (o->oTimer == 10) {
-                spawn_object_relative(0, 100, 400, 0, o, MODEL_METAL_BOX, bhvPushableMetalBox);  //MODEL_METAL_BOX
-                cur_obj_play_sound_1(SOUND_OBJ2_SWOOP_WAKE_UP);
-                }
-            if (o->oTimer == 20) {
-                spawn_object_relative(0, 300, 800, 0, o, MODEL_METAL_BOX, bhvPushableMetalBox); 
-                cur_obj_play_sound_1(SOUND_OBJ2_SWOOP_WAKE_UP);
-                }
-            if (o->oTimer == 30) {
-                spawn_object_relative(0, 500, 1200, 0, o, MODEL_METAL_BOX, bhvPushableMetalBox);
-                cur_obj_play_sound_1(SOUND_OBJ2_SWOOP_WAKE_UP); 
-                obj_mark_for_deletion(o);
-                }                
-
+        spawn_object_relative(0, 0, 0, 0, o, MODEL_BREAKABLE_BOX, bhvBreakableBox);
         }
 
 

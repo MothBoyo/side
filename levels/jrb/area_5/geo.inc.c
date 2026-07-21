@@ -1,13 +1,14 @@
 #include "src/game/envfx_snow.h"
 
-const GeoLayout bob_area_3_geo[] = {
+const GeoLayout jrb_area_5_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_dl_VISUAL_001_mesh_layer_1_with_revert),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, jrb_dl_VISUAL_003_mesh_layer_1_with_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, jrb_dl_VISUAL_003_mesh_layer_5_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout bob_area_3[] = {
+const GeoLayout jrb_area_5[] = {
 	GEO_NODE_SCREEN_AREA(10, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
 	GEO_OPEN_NODE(),
 		GEO_ZBUFFER(0),
@@ -23,7 +24,7 @@ const GeoLayout bob_area_3[] = {
 			GEO_OPEN_NODE(),
 				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 0, 0, 0, 0, -100, 0, geo_camera_main),
 				GEO_OPEN_NODE(),
-					GEO_BRANCH(1, bob_area_3_geo),
+					GEO_BRANCH(1, jrb_area_5_geo),
 					GEO_RENDER_OBJ(),
 					GEO_ASM(ENVFX_MODE_NONE, geo_envfx_main),
 				GEO_CLOSE_NODE(),

@@ -4,7 +4,7 @@ const GeoLayout bob_area_2_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_dl_VISUAL_mesh_layer_1_with_revert),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, bob_dl_VISUAL_mesh_layer_5_with_revert),
+		GEO_TRANSLATE_NODE(LAYER_OPAQUE, 0, 0, 2540),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -15,7 +15,7 @@ const GeoLayout bob_area_2[] = {
 		GEO_OPEN_NODE(),
 			GEO_NODE_ORTHO(100.0000),
 			GEO_OPEN_NODE(),
-				GEO_BACKGROUND_COLOR(0xDFEB),
+				GEO_BACKGROUND_COLOR(0x0001),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_ZBUFFER(1),

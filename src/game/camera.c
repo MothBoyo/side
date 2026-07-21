@@ -1158,6 +1158,49 @@ void mode_8_directions_camera(struct Camera *c) {
     set_camera_height(c, pos[1]);
 }
 
+void mode_2d_camera(struct Camera *c) {
+    Vec3f pos;
+    s16 oldAreaYaw = sAreaYaw;
+
+    //radial_camera_input(c);
+
+    if ((gPlayer1Controller->buttonPressed & R_CBUTTONS) && s8DirModeYawOffset < DEGREES(45)) {
+        s8DirModeYawOffset += DEGREES(15);
+        //play_sound_cbutton_side();
+    }
+    if ((gPlayer1Controller->buttonPressed & L_CBUTTONS) && s8DirModeYawOffset > -DEGREES(45)) {
+        s8DirModeYawOffset -= DEGREES(15);
+        //play_sound_cbutton_side();
+    }
+
+    if(gPlayer1Controller->buttonPressed & D_CBUTTONS){
+
+        if(sLakituDist < 600.f){
+            //sLakituPitch += 0x100;
+            sLakituDist += 200.f;
+        }
+
+
+    }
+
+    if(gPlayer1Controller->buttonPressed & U_CBUTTONS){
+
+        if(sLakituDist > -200.f){
+            //sLakituPitch -= 0x100;
+            sLakituDist -= 200.f;
+        }
+
+
+    }
+
+    //lakitu_zoom(400.f, 0x900);
+    c->nextYaw = update_8_directions_camera(c, c->focus, pos);
+    c->pos[0] = pos[0];
+    c->pos[2] = pos[2];
+    sAreaYawChange = sAreaYaw - oldAreaYaw;
+    set_camera_height(c, pos[1]);
+}
+
 /**
  * Updates the camera in outward radial mode.
  * sModeOffsetYaw is calculated in radial_camera_move, which calls offset_yaw_outward_radial
@@ -2885,7 +2928,7 @@ void update_camera(struct Camera *c) {
 #ifdef PUPPYCAM
         && !gPuppyCam.enabled
 #endif
-        && gCurrentArea->camera->mode != CAMERA_MODE_INSIDE_CANNON) {
+        && (gCurrentArea->camera->mode != (CAMERA_MODE_INSIDE_CANNON | CAMERA_MODE_2D))) {
         // Only process R_TRIG if 'fixed' is not selected in the menu
         if (cam_select_alt_mode(CAM_SELECTION_NONE) == CAM_SELECTION_MARIO) {
             //custom static camera //custom 2d camera
@@ -3031,6 +3074,10 @@ void update_camera(struct Camera *c) {
 
                 case CAMERA_MODE_SPIRAL_STAIRS:
                     mode_spiral_stairs_camera(c);
+                    break;
+
+                case CAMERA_MODE_2D:
+                    mode_2d_camera(c);
                     break;
 
                 //custom static camera //custom 2d camera    
@@ -10430,7 +10477,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // CASTLE_INSIDE  | HMC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // JRB            | THI
+	ZOOMOUT_AREA_MASK(1, 1, 1, 1, 1, 0, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // CASTLE_GROUNDS | BITDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // VCUTM          | BITFS

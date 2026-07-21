@@ -118,7 +118,7 @@ enum CameraModes {
     /*12*/ CAMERA_MODE_PARALLEL_TRACKING,
     /*13*/ CAMERA_MODE_FIXED,
     /*14*/ CAMERA_MODE_8_DIRECTIONS, // AKA Parallel Camera, Bowser Courses & Rainbow Ride
-    /*15*/ CAMERA_MODE_0F,
+    /*15*/ CAMERA_MODE_2D,
     /*16*/ CAMERA_MODE_FREE_ROAM,
     /*17*/ CAMERA_MODE_SPIRAL_STAIRS,
     /*18*/ CAMERA_MODE_STATIC //custom static camera and //custom 2d camera
