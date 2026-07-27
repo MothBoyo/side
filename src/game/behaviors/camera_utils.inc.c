@@ -67,5 +67,9 @@ void bhv_2d_camera_loop(void) {
 
 
 void bhv_2d_mode_loop(void) {
+    if (o->oBehParams2ndByte == 0) {
     gMarioState->pos[0] = o->oPosX; 
+    } else {
+    gMarioState->pos[2] = o->oPosZ; 
+    }
 }
