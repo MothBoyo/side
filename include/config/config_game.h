@@ -33,17 +33,17 @@
 /**
  * Number of coins to spawn the "100 coin" star. If you remove the define altogether, then there won't be a 100 coin star at all.
  */
-#define X_COIN_STAR 100
+//#define X_COIN_STAR 100
 
 /**
  * Stars don't kick you out of the level (does not play nicely with vanilla).
  */
-// #define NON_STOP_STARS
+#define NON_STOP_STARS
 
 /**
  * Bowser keys always exit the level. Only has an effect if NON_STOP_STARS is enabled.
  */
-// #define KEYS_EXIT_LEVEL
+#define KEYS_EXIT_LEVEL
 
 /**
  * Uncomment this if you want global star IDs (useful for creating an open world hack ala MVC).
@@ -58,7 +58,7 @@
 /**
  * Number of supported areas per level.
  */
-#define AREA_COUNT 8
+#define AREA_COUNT 9
 
 /**
  * Makes signs and NPCs easier to talk to.
