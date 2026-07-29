@@ -4839,7 +4839,7 @@ void start_cutscene(struct Camera *c, u8 cutscene) {
  */
 s32 determine_dance_cutscene(UNUSED struct Camera *c) {
 #ifdef NON_STOP_STARS
-    return CUTSCENE_DANCE_DEFAULT;
+//    return CUTSCENE_DANCE_DEFAULT;
 #else
 
     u8 cutscene = CUTSCENE_NONE;
@@ -4988,7 +4988,7 @@ u8 get_cutscene_from_mario_status(struct Camera *c) {
                 cutscene = determine_dance_cutscene(c);
                 break;
             case ACT_STAR_DANCE_NO_EXIT:
-                cutscene = CUTSCENE_DANCE_DEFAULT;
+                cutscene = determine_dance_cutscene(c);
                 break;
         }
         switch (sMarioCamState->cameraEvent) {
@@ -10475,7 +10475,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 1, 0), // BBH            | CCM
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // CASTLE_INSIDE  | HMC
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // SSL            | BOB
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
 	ZOOMOUT_AREA_MASK(1, 1, 1, 1, 1, 0, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR

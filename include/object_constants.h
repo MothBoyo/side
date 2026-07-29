@@ -984,6 +984,7 @@ enum oBehParam1stByteStarAct { // BPARAM1
     /* oBehParams2ndByte */
     #define SPAWN_STAR_POS_CUTSCENE_BP_SPAWN_AT_MARIO       0x0
     #define SPAWN_STAR_POS_CUTSCENE_BP_SPAWN_AT_HOME        0x1
+    #define SPAWN_STAR_ARC_CUTSCENE_BP_NO_CUTSCENE          0x2
     /* oAction */
     #define SPAWN_STAR_POS_CUTSCENE_ACT_START               0x0
     #define SPAWN_STAR_POS_CUTSCENE_ACT_BOUNCE              0x1

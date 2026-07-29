@@ -53,7 +53,8 @@ void bhv_star_spawn_init(void) {
     if (o->oBehParams2ndByte == SPAWN_STAR_ARC_CUTSCENE_BP_DEFAULT_STAR) {
 #endif
         cutscene_object(CUTSCENE_STAR_SPAWN, o);
-    } else {
+    //if none of those, ingore cutscene
+    } else if (o->oBehParams2ndByte == SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR) {
         cutscene_object(CUTSCENE_RED_COIN_STAR_SPAWN, o);
     }
 
@@ -135,19 +136,25 @@ struct Object *spawn_star(struct Object *starObj, f32 x, f32 y, f32 z) {
 void spawn_default_star(f32 x, f32 y, f32 z) {
     struct Object *starObj = NULL;
     starObj = spawn_star(starObj, x, y, z);
-    starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_DEFAULT_STAR;
+    //ignore cutscene for static camera / 2d levels
+    if (gCamera->mode != CAMERA_MODE_STATIC) {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_DEFAULT_STAR;}
+    else {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_NO_CUTSCENE;}
 }
 
 void spawn_red_coin_cutscene_star(f32 x, f32 y, f32 z) {
     struct Object *starObj = NULL;
     starObj = spawn_star(starObj, x, y, z);
-    starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR;
+    //ignore cutscene for static camera / 2d levels
+    if (gCamera->mode != CAMERA_MODE_STATIC) {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR;}
+    else {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_NO_CUTSCENE;}
 }
 
 void spawn_no_exit_star(f32 x, f32 y, f32 z) {
     struct Object *starObj = NULL;
     starObj = spawn_star(starObj, x, y, z);
-    starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR;
+    //ignore cutscene for static camera / 2d levels
+    if (gCamera->mode != CAMERA_MODE_STATIC) {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR;}
+    else {starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_NO_CUTSCENE;}
     starObj->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
 }
 
