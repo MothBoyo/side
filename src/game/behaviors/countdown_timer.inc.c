@@ -117,7 +117,10 @@ void bhv_countdown_timer_loop(void) {
             if (o->oHeldState == 1)  {
                 o->oHealth =  o->oHealth - 1;     
                 }                      
-            }
+            } else {
+                    //lets see
+                    obj_mark_for_deletion(o); 
+                    }
 
         } else {
             //death player

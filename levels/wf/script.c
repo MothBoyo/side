@@ -69,8 +69,9 @@ const LevelScript level_wf_entry[] = {
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, wf_area_1),
-		INSTANT_WARP(0x00, 0x02, 8619, -2560, 596),
-		INSTANT_WARP(0x01, 0x01, -8619, 2560, -596),
+		INSTANT_WARP(0x01, 0x02, 8619, -2560, 596),
+		INSTANT_WARP(0x02, 0x01, -8619, 2560, -596),
+		WARP_NODE(0x00, LEVEL_WF, 0x08, 8, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_FADING_PLATFORM, -7242, 3210, 157, 0, -45, 0, 0x00000000, bhvFadingPlatform),
 		OBJECT(MODEL_FADING_PLATFORM, -8591, 3710, -538, 0, -90, 0, 0x00000000, bhvFadingPlatform),
 		OBJECT(MODEL_FADING_PLATFORM, -9810, 4210, 237, 0, -135, 0, 0x00000000, bhvFadingPlatform),
@@ -99,6 +100,7 @@ const LevelScript level_wf_entry[] = {
 		OBJECT(MODEL_SILVER_STAR, -6341, 1230, 7312, 0, 0, 0, 0x00000000, bhvSilverStar),
 		OBJECT(MODEL_SILVER_STAR, -6111, 1910, 5515, 0, 0, 0, 0x00000000, bhvSilverStar),
 		OBJECT(MODEL_SILVER_STAR, -4811, 1350, 295, 0, 0, 0, 0x00000000, bhvSilverStar),
+		OBJECT(MODEL_EXCLAMATION_BOX, -5647, 1600, -1483, 0, 0, 0, 0x00000000, bhvExclamationBox),
 		TERRAIN(wf_area_1_collision),
 		MACRO_OBJECTS(wf_area_1_macro_objs),
 		STOP_MUSIC(0),
@@ -107,8 +109,8 @@ const LevelScript level_wf_entry[] = {
 		/* Fast64 end persistent block [area commands] */
 	END_AREA(),
 	AREA(2, wf_area_2),
-		INSTANT_WARP(0x00, 0x02, 8619, -2560, 596),
-		INSTANT_WARP(0x01, 0x01, -8619, 2560, -596),
+		INSTANT_WARP(0x01, 0x02, 8619, -2560, 596),
+		INSTANT_WARP(0x02, 0x01, -8619, 2560, -596),
 		OBJECT(MODEL_FADING_PLATFORM, -1647, 1450, -1146, 0, -30, 0, 0x00000000, bhvFadingPlatform),
 		OBJECT(MODEL_FADING_PLATFORM, 1647, 1450, -1146, 0, 30, 0, 0x00000000, bhvFadingPlatform),
 		OBJECT(MODEL_FADING_PLATFORM, -1668, 1950, 1143, 0, 30, 0, 0x00000000, bhvFadingPlatform),
@@ -122,6 +124,22 @@ const LevelScript level_wf_entry[] = {
 		OBJECT(MODEL_NOTEBLOCK, 0, 2200, 2025, 0, 0, 0, 0x00000000, bhvNoteblock),
 		TERRAIN(wf_area_2_collision),
 		MACRO_OBJECTS(wf_area_2_macro_objs),
+		STOP_MUSIC(0),
+		TERRAIN_TYPE(TERRAIN_STONE),
+		/* Fast64 begin persistent block [area commands] */
+		/* Fast64 end persistent block [area commands] */
+	END_AREA(),
+	AREA(8, wf_area_8),
+		WARP_NODE(0x00, LEVEL_BOB, 0x08, 8, WARP_NO_CHECKPOINT),
+		WARP_NODE(8, LEVEL_BOB, 0x08, 8, WARP_NO_CHECKPOINT),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, (1 << 16), bhv2dMode),
+		OBJECT(MODEL_NONE, 2000, 2300, 0, 0, 0, 0, (1 << 16), bhvOnOffBlock),
+		OBJECT(MODEL_ONOFF_SWITCH, -3200, 2700, 0, 0, 0, 0, (1 << 16), bhvOnOffButton),
+		OBJECT(MODEL_NONE, -4250, 1000, 0, 0, 0, 0, (8 << 16), bhvSpinAirborneWarp),
+		OBJECT(MODEL_STAR, 3250, 3200, 0, 0, 0, 0, (6 << 24), bhvStar),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, (30 << 16), bhvCountdownTimer),
+		TERRAIN(wf_area_8_collision),
+		MACRO_OBJECTS(wf_area_8_macro_objs),
 		STOP_MUSIC(0),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
