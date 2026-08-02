@@ -265,4 +265,46 @@ const GeoLayout red_coin_no_shadow_geo[] = {
    GEO_CLOSE_NODE(),
    GEO_END(),
 };
+
+extern const Gfx coin_seg3_dl_pink_front[];
+extern const Gfx coin_seg3_dl_pink_tilt_right[];
+extern const Gfx coin_seg3_dl_pink_side[];
+extern const Gfx coin_seg3_dl_pink_tilt_left[];
+
+const GeoLayout pink_coin_geo[] = {
+   GEO_SHADOW(SHADOW_CIRCLE_4_VERTS, 0xB4, 80),
+   GEO_OPEN_NODE(),
+      GEO_SWITCH_CASE(8, geo_switch_anim_state),
+      GEO_OPEN_NODE(),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_front),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_front),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_right),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_right),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_side),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_side),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_left),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_left),
+      GEO_CLOSE_NODE(),
+   GEO_CLOSE_NODE(),
+   GEO_END(),
+};
+
+const GeoLayout pink_coin_no_shadow_geo[] = {
+   GEO_NODE_START(),
+   GEO_OPEN_NODE(),
+      GEO_SWITCH_CASE(8, geo_switch_anim_state),
+      GEO_OPEN_NODE(),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_front),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_front),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_right),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_right),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_side),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_side),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_left),
+         GEO_DISPLAY_LIST(LAYER_OCCLUDE_SILHOUETTE_ALPHA, coin_seg3_dl_pink_tilt_left),
+      GEO_CLOSE_NODE(),
+   GEO_CLOSE_NODE(),
+   GEO_END(),
+};
+
 #endif

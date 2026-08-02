@@ -618,4 +618,47 @@ const Gfx coin_seg3_dl_red_tilt_left[] = {
     gsSPBranchList(coin_seg3_sub_dl_end),
 };
 
+//pink custom global coins //{255,  30, 200, 255 //HERE CHANGE THE RGB values to what you need
+const Vtx coin_seg3_vertex_pink[] = {
+    {{{   -35,      0,      0}, 0, {     0,   1984}, {255,  30, 200, 255}}},
+    {{{    35,      0,      0}, 0, {  1984,   1984}, {255,  30, 200, 255}}},
+    {{{    35,     70,      0}, 0, {  1984,      0}, {255,  30, 200, 255}}},
+    {{{   -35,     70,      0}, 0, {     0,      0}, {255,  30, 200, 255}}},
+};
+
+//global coins //pink custom coin
+const Gfx coin_seg3_dl_pink_front[] = {
+    gsDPPipeSync(),
+    gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_front),
+    gsSPDisplayList(coin_seg3_sub_dl_begin),
+    gsSPVertex(coin_seg3_vertex_pink, 4, 0),
+    gsSPBranchList(coin_seg3_sub_dl_end),
+};
+
+//pink custom coin
+const Gfx coin_seg3_dl_pink_tilt_right[] = {
+    gsDPPipeSync(),
+    gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_tilt_right),
+    gsSPDisplayList(coin_seg3_sub_dl_begin),
+    gsSPVertex(coin_seg3_vertex_pink, 4, 0),
+    gsSPBranchList(coin_seg3_sub_dl_end),
+};
+
+//pink custom coin
+const Gfx coin_seg3_dl_pink_side[] = {
+    gsDPPipeSync(),
+    gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_side),
+    gsSPDisplayList(coin_seg3_sub_dl_begin),
+    gsSPVertex(coin_seg3_vertex_pink, 4, 0),
+    gsSPBranchList(coin_seg3_sub_dl_end),
+};
+
+//pink custom coin
+const Gfx coin_seg3_dl_pink_tilt_left[] = {
+    gsDPPipeSync(),
+    gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_tilt_left),
+    gsSPDisplayList(coin_seg3_sub_dl_begin),
+    gsSPVertex(coin_seg3_vertex_pink, 4, 0),
+    gsSPBranchList(coin_seg3_sub_dl_end),
+};
 #endif

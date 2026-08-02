@@ -6289,3 +6289,24 @@ const BehaviorScript bhvVanishblock[] = {
         CALL_NATIVE(bhv_vanishblock_loop),
     END_LOOP(),
 }; 
+
+const BehaviorScript bhvPurpleCoin[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    BILLBOARD(),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    CALL_NATIVE(bhv_init_room),
+    CALL_NATIVE(bhv_purple_coin_init), 
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_yellow_coin_loop), 
+    END_LOOP(),
+};
+
+//purple coin manager (star spawner)
+const BehaviorScript bhvPurpleCometManager[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    SET_INT(oHealth, 0),
+    SET_INT(oHeldState, 0),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_purple_comet_manager_loop),
+    END_LOOP(),
+};

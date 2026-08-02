@@ -560,6 +560,7 @@ extern const BehaviorScript bhvCountdownTimer[];
 extern const BehaviorScript bhv2dCamera[];
 extern const BehaviorScript bhv2dMode[];
 extern const BehaviorScript bhvVanishblock[];
-
+extern const BehaviorScript bhvPurpleCoin[];
+extern const BehaviorScript bhvPurpleCometManager[];
 
 #endif // BEHAVIOR_DATA_H

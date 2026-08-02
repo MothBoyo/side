@@ -361,6 +361,8 @@
 #define MODEL_CAP_SWITCH_EXCLAMATION      0x54        // cap_switch_exclamation_seg5_dl_05002E00
 #define MODEL_CAP_SWITCH                  0x55        // cap_switch_geo
 #define MODEL_CAP_SWITCH_BASE             0x56        // cap_switch_base_seg5_dl_05003120
+#define MODEL_PURPLE_COIN                 0x57        // PINK_coin_geo
+#define MODEL_PURPLE_COIN_NO_SHADOW       0x58        // PINK_coin_no_shadow_geo
 
 // group 9
 #define MODEL_BOO                         0x54        // boo_geo

@@ -36,6 +36,36 @@ s32 bhv_coin_sparkles_init(void) {
     if (o->oInteractStatus & INT_STATUS_INTERACTED
         && !(o->oInteractStatus & INT_STATUS_TOUCHED_BOB_OMB)) {
         spawn_object(o, MODEL_SPARKLES, bhvCoinSparklesSpawner);
+
+        //if purple coin, then talk to the manager
+        if (o->behavior == segmented_to_virtual(bhvPurpleCoin)) {            //this is quiet sound, comment this line if want no sound at all!!
+            cur_obj_play_sound_2(SOUND_GENERAL_COIN_WATER); // COIN SOUND
+
+            //find manager
+            struct Object *manager = cur_obj_nearest_object_with_behavior(bhvPurpleCometManager);
+            if (manager != NULL) {
+                manager->oHealth++; //add one to manager vount
+
+            //spawn the orange number counter
+            if (manager->oHealth >= 100) {
+            //gundreds digit
+            spawn_orange_number(manager->oHealth / 100, -56, 0, 0);
+            //dec digit 
+            spawn_orange_number((manager->oHealth / 10) % 10, 0, 0, 0);
+            //unit digit
+            spawn_orange_number(manager->oHealth % 10, 56, 0, 0);
+                }
+                else if (manager->oHealth >= 10) {
+                    spawn_orange_number(manager->oHealth % 10, 28, 0, 0);
+                    spawn_orange_number(manager->oHealth / 10, -28, 0, 0);
+                }
+                else {
+                    spawn_orange_number(manager->oHealth, 0, 0, 0);
+                }
+
+            }
+        }
+
         obj_mark_for_deletion(o);
         return TRUE;
     }
@@ -325,4 +355,43 @@ void bhv_golden_coin_sparkles_loop(void) {
     struct Object *sparkleObj = spawn_object(o, MODEL_SPARKLES, bhvCoinSparkles);
     sparkleObj->oPosX += random_float() * 30.0f - 15.0f;
     sparkleObj->oPosZ += random_float() * 30.0f - 15.0f;
+}
+
+struct ObjectHitbox sPurpleCoinHitbox = {
+    /* interactType:      */ INTERACT_COIN,
+    /* downOffset:        */ 0,
+    /* damageOrCoinValue: */ 0,
+    /* health:            */ 0,
+    /* numLootCoins:      */ 0,
+    /* radius:            */ 110,
+    /* height:            */ 68,
+    /* hurtboxRadius:     */ 0,
+    /* hurtboxHeight:     */ 0,
+};
+
+
+void bhv_purple_coin_init(void) {
+    cur_obj_set_behavior(bhvPurpleCoin);
+    obj_set_hitbox(o, &sPurpleCoinHitbox);
+    if (500.0f < absf(o->oPosY - o->oFloorHeight)) {
+        if (cur_obj_has_model(MODEL_PURPLE_COIN)) {
+            cur_obj_set_model(MODEL_PURPLE_COIN_NO_SHADOW);
+        }
+    }
+}
+
+
+
+
+void bhv_purple_comet_manager_init(void) {
+    o->oHealth = 0; //oHealth is used for coin count
+    spawn_object(o, MODEL_TRANSPARENT_STAR, bhvRedCoinStarMarker);
+}
+
+void bhv_purple_comet_manager_loop(void) {
+    if (o->oHealth == 100 && o->oHeldState == 0){
+        //spawn star
+        spawn_default_star(o->oPosX, o->oPosY, o->oPosZ);
+        o->oHeldState = 1;
+    } 
 }
