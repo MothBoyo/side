@@ -1,0 +1,15 @@
+extern const GeoLayout vanishblock2_geo[];
+extern u8 vanishblock2_tempImgEd0518_i8[];
+extern u8 vanishblock2_tex1_32x32_m_b5d843f723cf71ad_4_ci8[];
+extern u8 vanishblock2_tex1_32x32_m_b5d843f723cf71ad_4_pal_rgba16[];
+extern Vtx vanishblock2_VISUAL2_mesh_layer_1_vtx_cull[8];
+extern Vtx vanishblock2_VISUAL2_mesh_layer_1_vtx_0[50];
+extern Gfx vanishblock2_VISUAL2_mesh_layer_1_tri_0[];
+extern Vtx vanishblock2_VISUAL2_mesh_layer_1_vtx_1[187];
+extern Gfx vanishblock2_VISUAL2_mesh_layer_1_tri_1[];
+extern Gfx mat_vanishblock2_PATTERN_2[];
+extern Gfx mat_revert_vanishblock2_PATTERN_2[];
+extern Gfx mat_vanishblock2_EDGE_2[];
+extern Gfx mat_revert_vanishblock2_EDGE_2[];
+extern Gfx vanishblock2_VISUAL2_mesh_layer_1[];
+extern Gfx vanishblock2_final_revert_mesh_layer_1[];

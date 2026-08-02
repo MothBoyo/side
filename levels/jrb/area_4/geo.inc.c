@@ -3,8 +3,11 @@
 const GeoLayout jrb_area_4_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, jrb_dl_VISUAL_002_mesh_layer_1_with_revert),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, jrb_dl_VISUAL_002_mesh_layer_5_with_revert),
+		GEO_ASM(0, geo_render_mirror_mario),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -150, 0, 150, jrb_dl_VISUAL_mesh_layer_1_with_revert),
+		GEO_OPEN_NODE(),
+			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, jrb_dl_VISUAL_mesh_layer_5_with_revert),
+		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -22,7 +25,7 @@ const GeoLayout jrb_area_4[] = {
 		GEO_OPEN_NODE(),
 			GEO_CAMERA_FRUSTUM_WITH_FUNC(45.0000, 100, 30000, geo_camera_fov),
 			GEO_OPEN_NODE(),
-				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 0, 0, 0, 0, -100, 0, geo_camera_main),
+				GEO_CAMERA(CAMERA_MODE_2D, 150, 0, 0, 150, -100, 0, geo_camera_main),
 				GEO_OPEN_NODE(),
 					GEO_BRANCH(1, jrb_area_4_geo),
 					GEO_RENDER_OBJ(),

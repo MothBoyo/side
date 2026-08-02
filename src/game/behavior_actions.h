@@ -578,6 +578,7 @@ void bhv_countdown_timer_loop(void);
 void bhv_countdown_timer_init(void);
 void bhv_2d_camera_loop(void);
 void bhv_2d_mode_loop(void);
+void bhv_vanishblock_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

@@ -45,3 +45,7 @@
 #include "green_platform/geo.inc.c"
 #include "green_platform_track/geo.inc.c"
 
+#include "vanishblock/geo.inc.c"
+#include "vanishblock2/geo.inc.c"
+#include "vanishblock3/geo.inc.c"
+#include "vanishblock4/geo.inc.c"

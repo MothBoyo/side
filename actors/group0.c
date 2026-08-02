@@ -71,3 +71,12 @@
 #include "green_platform/model.inc.c"
 #include "green_platform/collision.inc.c"
 #include "green_platform_track/model.inc.c"
+
+#include "vanishblock/collision.inc.c"
+#include "vanishblock/model.inc.c"
+#include "vanishblock2/collision.inc.c"
+#include "vanishblock2/model.inc.c"
+#include "vanishblock3/collision.inc.c"
+#include "vanishblock3/model.inc.c"
+#include "vanishblock4/collision.inc.c"
+#include "vanishblock4/model.inc.c"

@@ -376,4 +376,13 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "green_platform/geo_header.h"
 #include "green_platform/collision_header.h"
 #include "green_platform_track/geo_header.h"
+
+#include "vanishblock/collision_header.h"
+#include "vanishblock/geo_header.h"
+#include "vanishblock2/collision_header.h"
+#include "vanishblock2/geo_header.h"
+#include "vanishblock3/collision_header.h"
+#include "vanishblock3/geo_header.h"
+#include "vanishblock4/collision_header.h"
+#include "vanishblock4/geo_header.h"
 #endif

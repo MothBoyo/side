@@ -216,6 +216,10 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_FLIPSWAP_EDGE,           flipswap_edge_geo),
     LOAD_MODEL_FROM_GEO(MODEL_GREEN_PLATFORM,      green_platform_geo),
     LOAD_MODEL_FROM_GEO(MODEL_GREEN_PLATFORM_TRACK,      green_platform_track_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_VANISHBLOCK,             vanishblock_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_VANISHBLOCK2,             vanishblock2_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_VANISHBLOCK3,             vanishblock3_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_VANISHBLOCK4,             vanishblock4_geo),
     RETURN(),
 };
 

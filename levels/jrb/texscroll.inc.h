@@ -1,5 +1,12 @@
-extern void scroll_jrb_dl_VISUAL_001_mesh_layer_1_vtx_8();
-extern void scroll_jrb_dl_VISUAL_002_mesh_layer_1_vtx_9();
-extern void scroll_jrb_dl_VISUAL_004_mesh_layer_1_vtx_3();
+extern void scroll_jrb_dl_VIS_mesh_layer_1_vtx_3();
+extern void scroll_jrb_dl_VIS_mesh_layer_1_vtx_8();
+extern void scroll_jrb_dl_VIS_2_mesh_layer_1_vtx_0();
+extern void scroll_jrb_dl_VIS_2_mesh_layer_1_vtx_5();
+extern void scroll_jrb_dl_VIS_2_mesh_layer_1_vtx_7();
+extern void scroll_jrb_dl_VIS_2_mesh_layer_5_vtx_0();
+extern void scroll_jrb_dl_VIS_1_mesh_layer_1_vtx_4();
+extern void scroll_jrb_dl_VIS_1_mesh_layer_5_vtx_0();
+extern void scroll_gfx_mat_jrb_dl_MAGIC_PLATFORM_layer1();
 extern void scroll_gfx_mat_jrb_dl_ACID_layer1();
+extern void scroll_gfx_mat_jrb_dl_ABSTRACT_layer1();
 extern void scroll_jrb();

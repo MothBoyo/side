@@ -6280,3 +6280,12 @@ const BehaviorScript bhv2dMode[] = {
         CALL_NATIVE(bhv_2d_mode_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvVanishblock[] = {
+ BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(vanishblock_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_vanishblock_loop),
+    END_LOOP(),
+}; 

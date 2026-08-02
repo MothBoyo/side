@@ -559,6 +559,7 @@ extern const BehaviorScript bhvGreenPlatformCircular[];
 extern const BehaviorScript bhvCountdownTimer[];
 extern const BehaviorScript bhv2dCamera[];
 extern const BehaviorScript bhv2dMode[];
+extern const BehaviorScript bhvVanishblock[];
 
 
 #endif // BEHAVIOR_DATA_H
