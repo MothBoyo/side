@@ -595,7 +595,7 @@ Gfx *geo_render_mirror_mario(s32 callContext, struct GraphNode *node, UNUSED Mat
             geo_remove_child(&gMirrorMario.node);
             break;
         case GEO_CONTEXT_RENDER:
-            if (mario->header.gfx.pos[0] > 1700.0f) {
+            //if (mario->header.gfx.pos[0] > 1700.0f) {
                 // TODO: Is this a geo layout copy or a graph node copy?
                 gMirrorMario.sharedChild = mario->header.gfx.sharedChild;
                 gMirrorMario.areaIndex = mario->header.gfx.areaIndex;
@@ -604,14 +604,14 @@ Gfx *geo_render_mirror_mario(s32 callContext, struct GraphNode *node, UNUSED Mat
                 vec3f_copy(gMirrorMario.scale, mario->header.gfx.scale);
 
                 gMirrorMario.animInfo = mario->header.gfx.animInfo;
-                mirroredX = CASTLE_MIRROR_X - gMirrorMario.pos[0];
-                gMirrorMario.pos[0] = mirroredX + CASTLE_MIRROR_X;
+                mirroredX = CASTLE_MIRROR_X - gMirrorMario.pos[2];
+                gMirrorMario.pos[2] = mirroredX + CASTLE_MIRROR_X;
                 gMirrorMario.angle[1] = -gMirrorMario.angle[1];
-                gMirrorMario.scale[0] *= -1.0f;
+                gMirrorMario.scale[2] *= -1.0f;
                 ((struct GraphNode *) &gMirrorMario)->flags |= GRAPH_RENDER_ACTIVE;
-            } else {
-                ((struct GraphNode *) &gMirrorMario)->flags &= ~GRAPH_RENDER_ACTIVE;
-            }
+            //} else {
+            //    ((struct GraphNode *) &gMirrorMario)->flags &= ~GRAPH_RENDER_ACTIVE;
+            //}
             break;
     }
     return NULL;
