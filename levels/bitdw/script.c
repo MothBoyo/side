@@ -116,7 +116,7 @@ const LevelScript level_bitdw_entry[] = {
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(bitdw_area_1_collision),
 		MACRO_OBJECTS(bitdw_area_1_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_BOSS_KOOPA),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -132,7 +132,7 @@ const LevelScript level_bitdw_entry[] = {
 		OBJECT(MODEL_NONE, 2000, -6000, 3000, 0, 0, 0, 0x00000000, bhvSpinAirborneWarp),
 		TERRAIN(bitdw_area_2_collision),
 		MACRO_OBJECTS(bitdw_area_2_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_BOSS),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

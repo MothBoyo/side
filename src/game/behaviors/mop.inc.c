@@ -58,7 +58,8 @@ void bhv_onoffblock(void) {
     o->header.gfx.node.flags |= GRAPH_RENDER_ACTIVE;
 
     switch(o->oAction){
-        case 0: //init
+       case 0: //init
+    sOnOffState = FALSE;
             if (o->oBehParams2ndByte == 0) {
                 o->oAnimState = 0;
             } else {

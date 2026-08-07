@@ -103,7 +103,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_NONE, 1500, 200, -7300, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -135,7 +135,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_NONE, -600, 700, 600, 0, 0, 0, (6 << 24) | (25 << 16) | (2), bhvCountdownTimer),
 		TERRAIN(bob_area_8_collision),
 		MACRO_OBJECTS(bob_area_8_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_RACE),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

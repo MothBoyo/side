@@ -63,7 +63,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_BLACK_BOBOMB, -1991, 1200, -8597, 0, 0, 0, 0x00000000, bhvBobomb),
 		OBJECT(MODEL_BOO, 1900, 1050, -5360, 0, 0, 0, (2 << 16), bhvBoo),
 		OBJECT(MODEL_BOO, -6749, 2800, -6246, 0, 0, 0, (2 << 16), bhvBoo),
-		OBJECT(MODEL_BOO, 876, 4500, -11965, 0, 0, 0, (2 << 16), bhvBoo),
+		OBJECT(MODEL_BOO, 553, 4500, -11207, 0, 0, 0, (2 << 16), bhvBoo),
 		OBJECT(MODEL_BOO, -7028, 2600, -4352, 0, 0, 0, (2 << 16), bhvBoo),
 		OBJECT(MODEL_YELLOW_COIN, -4833, 1800, -4610, 0, 0, 0, 0x00000000, bhvYellowCoin),
 		OBJECT(MODEL_NONE, 2650, 2925, -8110, 0, 0, 0, (2 << 16), bhvCoinFormation),
@@ -99,8 +99,8 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_NONE, 900, 2000, -7610, 0, -90, 0, 0x00000000, bhvFlipswap),
 		OBJECT(MODEL_NONE, 1650, 2600, -8360, 0, 0, 0, 0x00000000, bhvFlipswap),
 		MARIO_POS(0x01, 0, 0, 0, -3000),
-		OBJECT(MODEL_NOTEBLOCK, 900, 4600, -11212, 0, 0, 0, 0x00000000, bhvNoteblock),
-		OBJECT(MODEL_NONE, 900, 4300, -11212, 0, 0, 0, 0x00000000, bhvOnOffBlock),
+		OBJECT(MODEL_NOTEBLOCK, 900, 4600, -11812, 0, 0, 0, 0x00000000, bhvNoteblock),
+		OBJECT(MODEL_NONE, 900, 4300, -11812, 0, 0, 0, 0x00000000, bhvOnOffBlock),
 		OBJECT(MODEL_ONOFF_SWITCH, -3000, 800, -9398, 0, 0, 0, (1 << 16), bhvOnOffButton),
 		OBJECT(MODEL_NONE, 1650, 975, -7610, 0, 0, 0, (5 << 16), bhvInteractiveTabletPodium),
 		OBJECT(MODEL_NONE, -4833, 1800, -4610, 0, 0, 0, 0x00000000, bhvHiddenStarTrigger),
@@ -114,7 +114,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_SNUFIT, -3854, 2032, -5976, 0, 0, 0, (2 << 16), bhvSnufit),
 		OBJECT(MODEL_STAR, -2550, 1550, -5395, 0, 0, 0, 0x00000000, bhvStar),
 		OBJECT(MODEL_STAR, -3800, 4600, -8448, 0, 0, 0, (2 << 24), bhvStar),
-		OBJECT(MODEL_STAR, 900, 5800, -11212, 0, 0, 0, (3 << 24), bhvStar),
+		OBJECT(MODEL_STAR, 900, 5800, -11012, 0, 0, 0, (3 << 24), bhvStar),
 		OBJECT(MODEL_INTERACTIVE_TABLET, 2400, 1625, -7860, 0, 0, 0, 0x00000000, bhvInteractiveTablet),
 		OBJECT(MODEL_INTERACTIVE_TABLET, 2900, 425, -8360, 0, 0, 0, 0x00000000, bhvInteractiveTablet),
 		OBJECT(MODEL_INTERACTIVE_TABLET, 3400, 1725, -8360, 0, 0, 0, 0x00000000, bhvInteractiveTablet),
@@ -126,7 +126,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_NONE, 0, 0, -3000, 0, -90, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(jrb_area_1_collision),
 		MACRO_OBJECTS(jrb_area_1_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -135,7 +135,7 @@ const LevelScript level_jrb_entry[] = {
 		INSTANT_WARP(0x01, 0x03, 0, 0, 0),
 		TERRAIN(jrb_area_2_collision),
 		MACRO_OBJECTS(jrb_area_2_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -152,7 +152,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_STAR, 0, 2900, 2, 0, 0, 0, (3 << 24), bhvStar),
 		TERRAIN(jrb_area_3_collision),
 		MACRO_OBJECTS(jrb_area_3_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -186,7 +186,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -10730, 0, 4075, 0, -90, 0, (3 << 16), bhvWarpPipe),
 		TERRAIN(jrb_area_4_collision),
 		MACRO_OBJECTS(jrb_area_4_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -202,7 +202,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_NONE, 2000, 0, 0, 0, 0, 0, (40 << 16), bhvCountdownTimer),
 		TERRAIN(jrb_area_8_collision),
 		MACRO_OBJECTS(jrb_area_8_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_RACE),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
