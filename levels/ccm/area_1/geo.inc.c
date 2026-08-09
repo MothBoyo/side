@@ -3,8 +3,9 @@
 const GeoLayout ccm_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, ccm_dl_DEATH_mesh_layer_1),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, ccm_dl_Plane_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, ccm_dl_VISUAL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, ccm_dl_VISUAL_mesh_layer_5),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, ccm_dl_final_revert_mesh_layer_5),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, ccm_dl_final_revert_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),

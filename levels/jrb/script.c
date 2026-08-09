@@ -102,7 +102,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_NOTEBLOCK, 900, 4600, -11812, 0, 0, 0, 0x00000000, bhvNoteblock),
 		OBJECT(MODEL_NONE, 900, 4300, -11812, 0, 0, 0, 0x00000000, bhvOnOffBlock),
 		OBJECT(MODEL_ONOFF_SWITCH, -3000, 800, -9398, 0, 0, 0, (1 << 16), bhvOnOffButton),
-		OBJECT(MODEL_NONE, 1650, 975, -7610, 0, 0, 0, (5 << 16), bhvInteractiveTabletPodium),
+		OBJECT(MODEL_NONE, 1650, 975, -7610, 0, 0, 0, (4 << 16), bhvInteractiveTabletPodium),
 		OBJECT(MODEL_NONE, -4833, 1800, -4610, 0, 0, 0, 0x00000000, bhvHiddenStarTrigger),
 		OBJECT(MODEL_NONE, -5333, 2200, -6110, 0, 0, 0, (1 << 24), bhvHiddenStar),
 		OBJECT(MODEL_NONE, -5833, 3000, -5610, 0, 0, 0, 0x00000000, bhvHiddenStarTrigger),

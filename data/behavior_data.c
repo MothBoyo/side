@@ -6298,6 +6298,7 @@ const BehaviorScript bhvPurpleCoin[] = {
     CALL_NATIVE(bhv_purple_coin_init), 
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_yellow_coin_loop), 
+        SET_FLOAT(oDrawingDistance, 10000),
     END_LOOP(),
 };
 
