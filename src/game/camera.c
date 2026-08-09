@@ -1164,12 +1164,12 @@ void mode_2d_camera(struct Camera *c) {
 
     //radial_camera_input(c);
 
-    if ((gPlayer1Controller->buttonPressed & R_CBUTTONS) && s8DirModeYawOffset < DEGREES(45)) {
-        s8DirModeYawOffset += DEGREES(15);
+    if ((gPlayer1Controller->buttonPressed & R_CBUTTONS) && s8DirModeYawOffset < DEGREES(50)) {
+        s8DirModeYawOffset += DEGREES(20);
         //play_sound_cbutton_side();
     }
-    if ((gPlayer1Controller->buttonPressed & L_CBUTTONS) && s8DirModeYawOffset > -DEGREES(45)) {
-        s8DirModeYawOffset -= DEGREES(15);
+    if ((gPlayer1Controller->buttonPressed & L_CBUTTONS) && s8DirModeYawOffset > -DEGREES(50)) {
+        s8DirModeYawOffset -= DEGREES(20);
         //play_sound_cbutton_side();
     }
 

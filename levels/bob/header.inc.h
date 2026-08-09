@@ -128,7 +128,7 @@ extern Vtx bob_dl_VISUAL_002_mesh_layer_1_vtx_0[16];
 extern Gfx bob_dl_VISUAL_002_mesh_layer_1_tri_0[];
 extern Vtx bob_dl_VISUAL_002_mesh_layer_1_vtx_1[20];
 extern Gfx bob_dl_VISUAL_002_mesh_layer_1_tri_1[];
-extern Vtx bob_dl_VISUAL_002_mesh_layer_1_vtx_2[8];
+extern Vtx bob_dl_VISUAL_002_mesh_layer_1_vtx_2[10];
 extern Gfx bob_dl_VISUAL_002_mesh_layer_1_tri_2[];
 extern Vtx bob_dl_VISUAL_002_mesh_layer_5_vtx_0[6];
 extern Gfx bob_dl_VISUAL_002_mesh_layer_5_tri_0[];

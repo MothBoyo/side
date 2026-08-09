@@ -149,7 +149,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_NONE, -436, 0, 1753, 0, 0, 0, (2 << 16), bhvCoinFormation),
 		OBJECT(MODEL_NONE, 0, 2500, 2, 0, 0, 0, (2 << 16), bhvCoinFormation),
 		OBJECT(MODEL_HMC_METAL_DOOR, 470, 0, 2, 0, -90, 0, (6 << 16), bhvDoorWarp),
-		OBJECT(MODEL_STAR, 0, 2900, 2, 0, 0, 0, (3 << 24), bhvStar),
+		OBJECT(MODEL_STAR, 0, 2900, 2, 0, 0, 0, (5 << 24), bhvStar),
 		TERRAIN(jrb_area_3_collision),
 		MACRO_OBJECTS(jrb_area_3_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
