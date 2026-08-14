@@ -5,9 +5,10 @@ const GeoLayout ccm_area_1_geo[] = {
 	GEO_OPEN_NODE(),
 		GEO_TRANSLATE_ROTATE(LAYER_OPAQUE, 0, 0, 0, 0, 0, 0),
 		GEO_OPEN_NODE(),
-			GEO_ASM(0, Gfx *geo_set_env_color_from_environment(s32 callContext, struct GraphNode *node, UNUSED void *context) {),
+			GEO_ASM(0, geo_set_env_color_from_environment),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, ccm_dl_VISUAL_001_mesh_layer_1_with_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT_DECAL, ccm_dl_VISUAL_002_mesh_layer_6_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

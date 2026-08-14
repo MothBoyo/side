@@ -641,3 +641,56 @@ Gfx *geo_mirror_mario_backface_culling(s32 callContext, struct GraphNode *node, 
     }
     return gfx;
 }
+
+Gfx *geo_set_env_color_from_environment(s32 callContext, struct GraphNode *node, UNUSED void *context) {
+    if (callContext == GEO_CONTEXT_RENDER) {
+        struct GraphNodeGenerated *graphNode = (struct GraphNodeGenerated *) node;
+        Gfx* gfx = alloc_display_list(2 * sizeof(Gfx));
+        Gfx* gfxHead = gfx;
+
+        SET_GRAPH_NODE_LAYER(graphNode->fnNode.node.flags, LAYER_OPAQUE);
+
+
+        const u32 holdDark = 60; //time in dark
+        const u32 rampUp = 60; //time from dark to col
+        const u32 holdBright = 60; //time in col
+        const u32 rampDown = 60; //time from col to dark
+
+        const u32 totalPeriod = holdDark + rampUp + holdBright + rampDown;
+        //modeuled time for thing
+        u32 timer = gGlobalTimer % totalPeriod;
+
+        u8 colorIntensity;
+
+        if (timer < holdDark) {
+            //dark
+            colorIntensity = 0;
+
+        } else if (timer < holdDark+rampUp) {
+
+            //dark to light
+            u32 localTimer = timer - holdDark;
+            colorIntensity = (u8) (localTimer * 255 / rampUp); //cats
+
+        } else if (timer < holdDark+rampUp+holdBright) {
+
+            //total light
+            colorIntensity = 255;
+
+        } else {
+            //light to dark
+            u32 localTimer = timer - (holdDark+rampUp+holdBright);
+            colorIntensity = (u8) (255 - (localTimer * 255 / rampDown));
+        }
+
+
+        
+        gDPSetEnvColor(gfxHead++, colorIntensity, colorIntensity, colorIntensity, 255); //cats
+
+        gSPEndDisplayList(gfxHead);
+
+        return gfx;
+    }
+
+    return NULL;
+}
