@@ -146,7 +146,7 @@ void moneybag_act_return_home(void) {
     moneybag_check_mario_collision();
 
     if (is_point_close_to_object(o, o->oHomeX, o->oHomeY, o->oHomeZ, 100)) {
-        spawn_object(o, MODEL_YELLOW_COIN, bhvMoneybagHidden);
+        spawn_object(o, MODEL_RED_COIN, bhvMoneybagHidden);
         cur_obj_play_sound_2(SOUND_GENERAL_VANISH_SFX);
         cur_obj_init_animation(0);
         o->oAction = MONEYBAG_ACT_DISAPPEAR;
