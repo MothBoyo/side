@@ -111,4 +111,5 @@ extern const struct MovtexQuadCollection bbh_movtex_merry_go_round_water_side[];
 // script
 extern const LevelScript level_bbh_entry[];
 
+#include "header.inc.h"
 #endif

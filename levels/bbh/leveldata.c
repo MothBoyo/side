@@ -68,3 +68,4 @@
 #include "levels/bbh/merry_go_round/collision.inc.c"
 #include "levels/bbh/coffin/collision.inc.c"
 #include "levels/bbh/areas/1/movtext.inc.c"
+#include "leveldata.inc.c"

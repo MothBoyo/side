@@ -3,7 +3,6 @@
 const GeoLayout wf_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, wf_dl_BG1_mesh_layer_1),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, wf_dl_VISUAL_001_mesh_layer_1_with_revert),
 		GEO_DISPLAY_LIST(LAYER_ALPHA, wf_dl_VISUAL_001_mesh_layer_4_with_revert),
 		GEO_TRANSLATE_NODE(LAYER_OPAQUE, -8619, 2560, 1945),

@@ -233,9 +233,7 @@ void scroll_jrb_dl_VIS_1_mesh_layer_5_vtx_0() {
 void scroll_gfx_mat_jrb_dl_MAGIC_PLATFORM_layer1() {
 	Gfx *mat = segmented_to_virtual(mat_jrb_dl_MAGIC_PLATFORM_layer1);
 
-
 	shift_s(mat, 11, PACK_TILESIZE(0, 1));
-	shift_t(mat, 16, PACK_TILESIZE(0, 1));
 
 };
 

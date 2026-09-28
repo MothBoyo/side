@@ -3,7 +3,6 @@
 const GeoLayout bitfs_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, bitfs_dl_BACKGROUND_mesh_layer_1),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, bitfs_dl_VISUAL_mesh_layer_1_with_revert),
 		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, bitfs_dl_VISUAL_mesh_layer_5_with_revert),
 		GEO_TRANSLATE_NODE(LAYER_OPAQUE, 10950, 6950, 0),

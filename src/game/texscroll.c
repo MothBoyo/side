@@ -21,6 +21,11 @@
 #include "src/game/texscroll/bitdw_texscroll.inc.c"
 #include "src/game/texscroll/sa_texscroll.inc.c"
 #include "src/game/texscroll/ccm_texscroll.inc.c"
+#include "src/game/texscroll/bbh_texscroll.inc.c"
+#include "src/game/texscroll/hmc_texscroll.inc.c"
+#include "src/game/texscroll/pss_texscroll.inc.c"
+#include "src/game/texscroll/cotmc_texscroll.inc.c"
+#include "src/game/texscroll/vcutm_texscroll.inc.c"
 void scroll_textures() {
 	if(SCROLL_CONDITION(sSegmentROMTable[0x4] == (uintptr_t)_group0_yay0SegmentRomStart)) {
 		scroll_textures_group0();
@@ -52,6 +57,26 @@ void scroll_textures() {
 
 	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_ccm_segment_7SegmentRomStart)) {
 		scroll_textures_ccm();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_bbh_segment_7SegmentRomStart)) {
+		scroll_textures_bbh();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_hmc_segment_7SegmentRomStart)) {
+		scroll_textures_hmc();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_pss_segment_7SegmentRomStart)) {
+		scroll_textures_pss();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_cotmc_segment_7SegmentRomStart)) {
+		scroll_textures_cotmc();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_vcutm_segment_7SegmentRomStart)) {
+		scroll_textures_vcutm();
 	}
 
 }
