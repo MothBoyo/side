@@ -6311,3 +6311,29 @@ const BehaviorScript bhvPurpleCometManager[] = {
         CALL_NATIVE(bhv_purple_comet_manager_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvHiddenCollectableSwitch[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    LOAD_COLLISION_DATA(blue_coin_switch_seg8_collision_08000E98),
+    SET_HOME(),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_switch_hidden_collectable_loop),
+    END_LOOP(),
+};
+
+//look that
+const BehaviorScript bhvHiddenCollectable[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    SET_INT(oInteractType, INTERACT_COIN),
+    OR_INT(oFlags, (OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BILLBOARD(),
+    SET_HITBOX(/*Radius*/ 100, /*Height*/ 64),
+    SET_INT(oDamageOrCoinValue, 0),
+    SET_INT(oIntangibleTimer, 0),
+    SET_INT(oAnimState, OBJ_ANIM_STATE_INIT_ANIM),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_hidden_collectible_loop),
+        ADD_INT(oAnimState, 1),
+    END_LOOP(),
+};

@@ -562,5 +562,7 @@ extern const BehaviorScript bhv2dMode[];
 extern const BehaviorScript bhvVanishblock[];
 extern const BehaviorScript bhvPurpleCoin[];
 extern const BehaviorScript bhvPurpleCometManager[];
+extern const BehaviorScript bhvHiddenCollectableSwitch[];
+extern const BehaviorScript bhvHiddenCollectable[];
 
 #endif // BEHAVIOR_DATA_H

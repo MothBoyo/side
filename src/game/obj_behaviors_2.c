@@ -52,6 +52,7 @@
 #include "behaviors/custom_exclamation_box.inc.c"
 #include "behaviors/silver_star.inc.c"
 #include "behaviors/green_platform.inc.c"
+#include "behaviors/timed_collectable.inc.c"
 
 //! TODO: remove static
 

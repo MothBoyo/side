@@ -34,21 +34,17 @@ const LevelScript level_pss_entry[] = {
 	JUMP_LINK(script_func_global_10), 
 	JUMP_LINK(script_func_global_14), 
 	LOAD_MODEL_FROM_GEO(MODEL_CASTLE_GROUNDS_WARP_PIPE, warp_pipe_geo), 
-    /* Fast64 begin persistent block [level commands] */
+	/* Fast64 begin persistent block [level commands] */
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, pss_area_1),
-		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(0xF0, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(0xF1, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		WARP_NODE(3, LEVEL_BOB, 0x02, 4, WARP_NO_CHECKPOINT),
+		WARP_NODE(8, LEVEL_CASTLE, 0x01, 6, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_AMP, 3612, -2382, -3559, 0, 0, 0, (1 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -1736, -4125, -100, 0, 0, 0, (3 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -153, -6374, 1417, 0, 0, 0, (3 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_AMP, 2778, -2642, -1333, 0, 0, 0, (3 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_BOWLING_BALL, -2388, -6818, 4440, 0, 0, 0, 0x00000000, bhvFireSpitter),
 		OBJECT(MODEL_BOWLING_BALL, 2471, -1681, 1793, 0, 0, 0, 0x00000000, bhvFireSpitter),
-		MARIO_POS(0x01, 0, 0, 0, 0),
 		OBJECT(MODEL_RED_COIN, -4321, -5406, -1851, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_NONE, 2442, -4600, -153, 0, 0, 0, (3 << 24), bhvHiddenRedCoinStar),
 		OBJECT(MODEL_RED_COIN, -2878, -5618, 4930, 0, 0, 0, 0x00000000, bhvRedCoin),
@@ -59,7 +55,6 @@ const LevelScript level_pss_entry[] = {
 		OBJECT(MODEL_RED_COIN, -5722, -6174, 1753, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 6414, -3847, -1042, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 2442, -5000, 247, 0, -180, 0, (8 << 16), bhvWarpPipe),
-		OBJECT(MODEL_NONE, 0, 0, 0, 0, -90, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(pss_area_1_collision),
 		MACRO_OBJECTS(pss_area_1_macro_objs),
 		STOP_MUSIC(0),
@@ -68,7 +63,7 @@ const LevelScript level_pss_entry[] = {
 		/* Fast64 end persistent block [area commands] */
 	END_AREA(),
 	FREE_LEVEL_POOL(),
-	MARIO_POS(0x01, 0, 0, 0, 0),
+	MARIO_POS(1, 0, 0, 0, 0),
 	CALL(0, lvl_init_or_update),
 	CALL_LOOP(1, lvl_init_or_update),
 	CLEAR_LEVEL(),

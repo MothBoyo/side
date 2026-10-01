@@ -581,6 +581,8 @@ void bhv_2d_mode_loop(void);
 void bhv_vanishblock_loop(void);
 void bhv_purple_coin_init(void);
 void bhv_purple_comet_manager_loop(void);
+void bhv_hidden_collectible_loop(void);
+void bhv_switch_hidden_collectable_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 
