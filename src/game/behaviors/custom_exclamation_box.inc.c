@@ -34,7 +34,11 @@ struct CustomExclamationBoxContents sCustomExclamationBoxContents[] = { // the g
  // [ENUM_FROM_ABOVE      ] = { MODEL_OF_OBJECT, bhvBehaviorOfObject, behavior_param_applied_to_the_second_byte_of_the_actor_params }
     [CUSTOM_ITEM_0        ] = { MODEL_GOOMBA,  bhvGoomba,               0 },
     [CUSTOM_ITEM_1        ] = { MODEL_CHUCKYA, bhvChuckya,              0 },
-    [CUSTOM_ITEM_2        ] = { MODEL_EXCLAMATION_BOX,       bhvCustomExclamationBox,             2 },
+    [CUSTOM_ITEM_2        ] = { MODEL_AMP,     bhvCirclingAmp,          1 },
+    [CUSTOM_ITEM_3        ] = { MODEL_AMP,     bhvHomingAmp,            0 },
+    [CUSTOM_ITEM_4        ] = { MODEL_BLACK_BOBOMB,     bhvBobomb,      0 },
+    [CUSTOM_ITEM_5        ] = { MODEL_SCUTTLEBUG,     bhvScuttlebug,    0 },
+    [CUSTOM_ITEM_6        ] = { MODEL_HEAVE_HO,     bhvHeaveHo,         0 },
 };
 
 void custom_exclamation_box_spawn_contents(struct CustomExclamationBoxContents *contentsList, u8 lootIndex) {

@@ -117,6 +117,7 @@ const LevelScript level_wf_entry[] = {
 		OBJECT(MODEL_BLUE_COIN, 4742, 964, 495, 0, 0, 0, 0x00000000, bhvHiddenCollectable),
 		OBJECT(MODEL_BLUE_COIN_SWITCH, 3053, 864, 1897, 0, 0, 0, 0x00000000, bhvHiddenCollectableSwitch),
 		OBJECT(MODEL_EXCLAMATION_BOX, -5647, 1600, -1483, 0, 0, 0, 0x00000000, bhvExclamationBox),
+		OBJECT(MODEL_NONE, 0, 1500, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(wf_area_1_collision),
 		MACRO_OBJECTS(wf_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_WATER),

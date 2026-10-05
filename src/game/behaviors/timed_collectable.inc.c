@@ -10,7 +10,7 @@
 #define SWITCH_COLLECTABLE_ACT_EXTENDING 3
 
 
-#define SWITCH_TIMER 550 //change thios
+#define SWITCH_TIMER 560 //change thios
 //bparam 1 = STAR ID
 
 
@@ -81,7 +81,7 @@ void bhv_hidden_collectible_loop(void) {
     if (o->oInteractStatus & INT_STATUS_INTERACTED) {
         spawn_object(o, MODEL_SPARKLES, bhvCoinSparklesSpawner);
         //SND
-        cur_obj_play_sound_2(SOUND_GENERAL_BOING3_UNUSED);
+        cur_obj_play_sound_2(SOUND_GENERAL_RED_COIN);
         o->oAction =  HIDDEN_COLLECTABLE_ACT_COLLECTED;  
     }
 

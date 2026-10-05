@@ -1,2 +1,4 @@
+extern void scroll_gfx_mat_castle_inside_dl_PAINTING_FRAME_layer1();
+extern void scroll_gfx_mat_castle_inside_dl_VANISHING_FLOOR_001_layer1();
 extern void scroll_gfx_mat_castle_inside_dl_ABSTRACT_layer1();
 extern void scroll_castle_inside();

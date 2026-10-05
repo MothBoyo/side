@@ -3,8 +3,13 @@
 const GeoLayout castle_inside_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_inside_dl_Circle_mesh_layer_1_with_revert),
-		GEO_DISPLAY_LIST(LAYER_ALPHA, castle_inside_dl_Circle_mesh_layer_4_with_revert),
+		GEO_ASM(0, geo_painting_update),
+		GEO_ASM(PAINTING_ID(0, 1), geo_painting_draw),
+		GEO_ASM(PAINTING_ID(2, 1), geo_painting_draw),
+		GEO_ASM(PAINTING_ID(3, 1), geo_painting_draw),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_inside_dl_VISUAL_mesh_layer_1_with_revert),
+		GEO_DISPLAY_LIST(LAYER_ALPHA, castle_inside_dl_VISUAL_mesh_layer_4_with_revert),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, castle_inside_dl_VISUAL_mesh_layer_5_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

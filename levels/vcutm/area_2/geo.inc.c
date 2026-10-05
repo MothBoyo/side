@@ -3,7 +3,6 @@
 const GeoLayout vcutm_area_2_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ASM(0, geo_render_mirror_mario),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, vcutm_dl_VISUAL_001_mesh_layer_1_with_revert),
 		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, vcutm_dl_VISUAL_001_mesh_layer_5_with_revert),
 	GEO_CLOSE_NODE(),

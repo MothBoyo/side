@@ -34,7 +34,7 @@ const LevelScript level_jrb_entry[] = {
 	MARIO(MODEL_MARIO, 0x00000001, bhvMario), 
 	JUMP_LINK(script_func_global_1), 
 	JUMP_LINK(script_func_global_10), 
-	JUMP_LINK(script_func_global_18),  
+	JUMP_LINK(script_func_global_18), 
 	LOAD_MODEL_FROM_GEO(MODEL_HMC_METAL_DOOR, metal_door_geo), 
 	LOAD_MODEL_FROM_GEO(MODEL_CASTLE_GROUNDS_WARP_PIPE, warp_pipe_geo), 
 	/* Fast64 begin persistent block [level commands] */
@@ -112,7 +112,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -2250, 2450, -5510, 0, 0, 0, (1 << 16), bhvWarpPipe),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -2805, 1150, -5423, 0, 90, 0, (4 << 16), bhvWarpPipe),
 		OBJECT(MODEL_EXCLAMATION_BOX, 3650, 2750, -5110, 0, 0, 0, 0x00000000, bhvExclamationBox),
-		OBJECT(MODEL_NONE, 0, 0, -3000, 0, -90, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 0, 1500, -3000, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(jrb_area_1_collision),
 		MACRO_OBJECTS(jrb_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),
