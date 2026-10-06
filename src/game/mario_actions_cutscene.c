@@ -623,9 +623,19 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                 if (!(m->actionArg & 1)) {
                     level_trigger_warp(m, WARP_OP_STAR_EXIT);
                 } else {
+                    //here changes the handler for the seventh star to handle warp after text
+                    //star 7
                     enable_time_stop();
-                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
-                    m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
+        
+                    if (gLastCompletedStarNum == 7) {
+                        create_dialog_box_with_response(DIALOG_013);
+                        m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
+                    } else {
+                        //normal non stop star
+                        create_dialog_box_with_response(DIALOG_014);
+                        m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;                      
+                    }
+
                 }
                 break;
         }
@@ -634,10 +644,17 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
             save_file_do_save(gCurrSaveFileNum - 1);
         }
         m->actionState = ACT_STATE_STAR_DANCE_RETURN;
+
     } else if (m->actionState == ACT_STATE_STAR_DANCE_RETURN && is_anim_at_end(m)) {
         disable_time_stop();
         enable_background_sound();
         s32 dialogID = get_star_collection_dialog(m);
+
+        //here specific check //star 7
+        if (gLastCompletedStarNum == 7) {
+                level_trigger_warp(m, WARP_OP_STAR_EXIT);
+            }   
+            
         if (dialogID) {
             // look up for dialog
             set_mario_action(m, ACT_READING_AUTOMATIC_DIALOG, dialogID);
