@@ -446,6 +446,9 @@ void unload_objects_from_area(UNUSED s32 unused, s32 areaIndex) {
 /**
  * Spawn objects given a list of SpawnInfos. Called when loading an area.
  */
+/**
+ * Spawn objects given a list of SpawnInfos. Called when loading an area.
+ */
 void spawn_objects_from_info(UNUSED s32 unused, struct SpawnInfo *spawnInfo) {
     gObjectLists = gObjectListArray;
     gTimeStopState = 0;
@@ -464,6 +467,11 @@ void spawn_objects_from_info(UNUSED s32 unused, struct SpawnInfo *spawnInfo) {
         const BehaviorScript *script;
 
         script = segmented_to_virtual(spawnInfo->behaviorScript);
+
+        //clear the respawn flag in index 8, so always looks like new objects
+        if (gCurrAreaIndex == 8) {
+            spawnInfo->behaviorArg &= ~(RESPAWN_INFO_DONT_RESPAWN << 8);
+        }
 
         // If the object was previously killed/collected, don't respawn it
         if ((spawnInfo->behaviorArg & (RESPAWN_INFO_DONT_RESPAWN << 8))
