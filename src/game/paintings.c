@@ -1094,43 +1094,43 @@ void reset_painting(struct Painting *painting) {
  *  2 (0b10): set x coordinate to backPos
  *  3 (0b11): same as 2. Bit 0 is ignored
  */
-#ifdef UNLOCK_ALL
-void move_ddd_painting(struct Painting *painting, UNUSED f32 frontPos, f32 backPos, UNUSED f32 speed) {
-    painting->posX = backPos;
-    gDddPaintingStatus = (DDD_FLAG_BOWSERS_SUB_BEATEN | DDD_FLAG_BACK);
-}
-#else
-void move_ddd_painting(struct Painting *painting, f32 frontPos, f32 backPos, f32 speed) {
-    // Obtain the DDD star flags
-    u32 dddFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_NUM_TO_INDEX(COURSE_DDD));
-    // Get the other save file flags
-    u32 saveFileFlags = save_file_get_flags();
-    // Find out whether Board Bowser's Sub was collected
-    u32 bowsersSubBeaten = dddFlags & BOARD_BOWSERS_SUB;
-    // Check whether DDD has already moved back
-    u32 dddBack = saveFileFlags & SAVE_FLAG_DDD_MOVED_BACK;
-
-    if (!bowsersSubBeaten && !dddBack) {
-        // If we haven't collected the star or moved the painting, put the painting at the front
-        painting->posX = frontPos;
-        gDddPaintingStatus = DDD_FLAGS_NONE;
-    } else if (bowsersSubBeaten && !dddBack) {
+//#ifdef UNLOCK_ALL
+//void move_ddd_painting(struct Painting *painting, UNUSED f32 frontPos, f32 backPos, UNUSED f32 speed) {
+//    painting->posX = backPos;
+//    gDddPaintingStatus = (DDD_FLAG_BOWSERS_SUB_BEATEN | DDD_FLAG_BACK);
+//}
+//#else
+//void move_ddd_painting(struct Painting *painting, f32 frontPos, f32 backPos, f32 speed) {
+//    // Obtain the DDD star flags
+//   u32 dddFlags = save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_NUM_TO_INDEX(COURSE_DDD));
+//    // Get the other save file flags
+//    u32 saveFileFlags = save_file_get_flags();
+//    // Find out whether Board Bowser's Sub was collected
+ //   u32 bowsersSubBeaten = dddFlags & BOARD_BOWSERS_SUB;
+//    // Check whether DDD has already moved back
+//   u32 dddBack = saveFileFlags & SAVE_FLAG_DDD_MOVED_BACK;
+//
+//    if (!bowsersSubBeaten && !dddBack) {
+//       // If we haven't collected the star or moved the painting, put the painting at the front
+//        painting->posX = frontPos;
+//        gDddPaintingStatus = DDD_FLAGS_NONE;
+//    } else if (bowsersSubBeaten && !dddBack) {
         // If we've collected the star but not moved the painting back,
         // Each frame, move the painting by a certain speed towards the back area.
-        painting->posX += speed;
-        gDddPaintingStatus = DDD_FLAG_BOWSERS_SUB_BEATEN;
-        if (painting->posX >= backPos) {
-            painting->posX = backPos;
-            // Tell the save file that we've moved DDD back.
-            save_file_set_flags(SAVE_FLAG_DDD_MOVED_BACK);
-        }
-    } else if (bowsersSubBeaten && dddBack) {
-        // If the painting has already moved back, place it in the back position.
-        painting->posX = backPos;
-        gDddPaintingStatus = (DDD_FLAG_BOWSERS_SUB_BEATEN | DDD_FLAG_BACK);
-    }
-}
-#endif
+//        painting->posX += speed;
+//        gDddPaintingStatus = DDD_FLAG_BOWSERS_SUB_BEATEN;
+//        if (painting->posX >= backPos) {
+//            painting->posX = backPos;
+//            // Tell the save file that we've moved DDD back.
+//            save_file_set_flags(SAVE_FLAG_DDD_MOVED_BACK);
+//        }
+//    } else if (bowsersSubBeaten && dddBack) {
+//       // If the painting has already moved back, place it in the back position.
+//        painting->posX = backPos;
+//        gDddPaintingStatus = (DDD_FLAG_BOWSERS_SUB_BEATEN | DDD_FLAG_BACK);
+//   }
+//}
+//#endif
 
 /**
  * Set the painting's node's layer based on its alpha
@@ -1228,9 +1228,9 @@ Gfx *geo_painting_draw(s32 callContext, struct GraphNode *node, UNUSED void *con
     } else if (callContext == GEO_CONTEXT_RENDER) {
 
         // Update the ddd painting before drawing
-        if (group == 1 && id == PAINTING_ID_DDD) {
-            move_ddd_painting(painting, 3456.0f, 5529.6f, 20.0f);
-        }
+       // if (group == 1 && id == PAINTING_ID_DDD) {
+       //     move_ddd_painting(painting, 3456.0f, 5529.6f, 20.0f);
+      //  }
 
         // Determine if the painting is transparent
         set_painting_layer(gen, painting);

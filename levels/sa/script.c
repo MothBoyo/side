@@ -32,12 +32,13 @@ const LevelScript level_sa_entry[] = {
 	MARIO(MODEL_MARIO, 0x00000001, bhvMario), 
 	JUMP_LINK(script_func_global_1), 
 	JUMP_LINK(script_func_global_9), 
-	LOAD_MODEL_FROM_GEO(MODEL_CASTLE_GROUNDS_WARP_PIPE, warp_pipe_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_CASTLE_GROUNDS_WARP_PIPE, warp_pipe_geo), 
 	/* Fast64 begin persistent block [level commands] */
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, sa_area_1),
 		WARP_NODE(0x0A, LEVEL_CASTLE, 0x01, 3, WARP_NO_CHECKPOINT),
+		WARP_NODE(241, LEVEL_CASTLE, 0x01, 3, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_CAP_SWITCH, 5375, 100, -1675, 0, 0, 0, 0x00000000, bhvCapSwitch),
 		OBJECT(MODEL_CHUCKYA, -5050, 100, 3086, 0, 0, 0, 0x00000000, bhvChuckya),
 		OBJECT(MODEL_CHUCKYA, -2884, 2100, -4000, 0, 0, 0, 0x00000000, bhvChuckya),

@@ -39,6 +39,7 @@ const LevelScript level_pss_entry[] = {
 
 	AREA(1, pss_area_1),
 		WARP_NODE(8, LEVEL_CASTLE, 0x01, 6, WARP_NO_CHECKPOINT),
+		WARP_NODE(241, LEVEL_CASTLE, 0x01, 6, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_AMP, 3612, -2382, -3559, 0, 0, 0, (1 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -1736, -4125, -100, 0, 0, 0, (3 << 16), bhvCirclingAmp),
 		OBJECT(MODEL_AMP, -153, -6374, 1417, 0, 0, 0, (3 << 16), bhvCirclingAmp),

@@ -10,6 +10,7 @@ const GeoLayout castle_inside_area_1_geo[] = {
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_inside_dl_VISUAL_mesh_layer_1_with_revert),
 		GEO_DISPLAY_LIST(LAYER_ALPHA, castle_inside_dl_VISUAL_mesh_layer_4_with_revert),
 		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, castle_inside_dl_VISUAL_mesh_layer_5_with_revert),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE_DECAL, castle_inside_dl_VISUAL_mesh_layer_2_with_revert),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

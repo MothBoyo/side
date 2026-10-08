@@ -1535,8 +1535,8 @@ struct Painting ddd_painting = {
     /* Texture Type */ PAINTING_ENV_MAP,
     /* Floor Status */ 0x00, 0x00, 0x00 /* which of the painting's nearby special floors Mario's on */,
     /* Ripple Status */ 0x00,
-    /* Rotation */    0.0f, 270.0f,
-    /* Position */ 3456.0f, -1075.2f, 1587.2f,
+    /* Rotation */    0.0f, 0.0f,
+    /* Position */ -400.0f, 600.0f,-5700.0f,
     /*                         curr   passive     entry */
     /* Ripple Magnitude */     0.0f,    10.0f,    30.0f,
     /* Ripple Decay */         1.0f,     1.0f,    0.98f,
@@ -1552,7 +1552,7 @@ struct Painting ddd_painting = {
     /* Ripple Trigger */ RIPPLE_TRIGGER_CONTINUOUS,
     /* Alpha */ 0xB4,
     /* Mario Below */  0x00, 0x00, 0x00, /* Whether or not Mario is below the painting */
-    /* Size */  819.2f,
+    /* Size */  800.0f,
 };
 
 // 0x070239E0 - 0x07023A58
