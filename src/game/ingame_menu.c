@@ -1596,6 +1596,16 @@ void render_pause_my_score_coins(void) {
     u8 textStar[] = { TEXT_STAR };
     u8 textUnfilledStar[] = { TEXT_UNFILLED_STAR };
 
+    static s8 selectedCourseActNum = 0;
+	if(gMarioState->controller->buttonPressed & R_JPAD) {
+		selectedCourseActNum = (selectedCourseActNum + 1) % 6;
+	}
+	if(gMarioState->controller->buttonPressed & L_JPAD) {
+		selectedCourseActNum--;
+		if(selectedCourseActNum < 0) { selectedCourseActNum = 5; }
+	}
+
+
     u8 strCourseNum[4];
 
     void **courseNameTbl = segmented_to_virtual(languageTable[gInGameLanguage][1]);
@@ -1624,21 +1634,26 @@ void render_pause_my_score_coins(void) {
 
     u8 *courseName = segmented_to_virtual(courseNameTbl[courseIndex]);
 
+
     if (courseIndex <= COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX)) {
-        print_generic_string(TXT_COURSE_X, 157, LANGUAGE_ARRAY(textCourse));
+	    for(u8 i = 0; i < 6; ++i) {
+		    u8 yValue = 157;
+		    if(i == selectedCourseActNum) { yValue += 5; }
+	        if (starFlags & (1 << i)) {
+		        print_generic_string(TXT_STAR_X + i*10, yValue, textStar);
+	        } else {
+		        print_generic_string(TXT_STAR_X + i*10, yValue, textUnfilledStar);
+	        }
+	    }
+
+        print_generic_string(TXT_COURSE_X, 180, LANGUAGE_ARRAY(textCourse));
         int_to_str(gCurrCourseNum, strCourseNum);
-        print_generic_string(CRS_NUM_X1, 157, strCourseNum);
+        print_generic_string(CRS_NUM_X1, 180, strCourseNum);
 
-        u8 *actName = segmented_to_virtual(actNameTbl[COURSE_NUM_TO_INDEX(gCurrCourseNum) * 6 + gDialogCourseActNum - 1]);
+        u8 *actName = segmented_to_virtual(actNameTbl[COURSE_NUM_TO_INDEX(gCurrCourseNum) * 6 + gDialogCourseActNum+selectedCourseActNum - 1]);
 
-        if (starFlags & (1 << (gDialogCourseActNum - 1))) {
-            print_generic_string(TXT_STAR_X, 140, textStar);
-        } else {
-            print_generic_string(TXT_STAR_X, 140, textUnfilledStar);
-        }
-
-        print_generic_string(ACT_NAME_X, 140, actName);
-        print_generic_string(LVL_NAME_X, 157, &courseName[3]);
+        print_generic_string(80, 140, actName);
+        print_generic_string(LVL_NAME_X, 180, &courseName[3]);
     } else {
         print_generic_string(SECRET_LVL_NAME_X, 157, &courseName[3]);
     }

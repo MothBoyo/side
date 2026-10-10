@@ -171,7 +171,7 @@ extern Vtx castle_inside_dl_VISUAL_001_mesh_layer_1_vtx_0[1606];
 extern Gfx castle_inside_dl_VISUAL_001_mesh_layer_1_tri_0[];
 extern Vtx castle_inside_dl_VISUAL_001_mesh_layer_1_vtx_1[46];
 extern Gfx castle_inside_dl_VISUAL_001_mesh_layer_1_tri_1[];
-extern Vtx castle_inside_dl_VISUAL_001_mesh_layer_1_vtx_2[42];
+extern Vtx castle_inside_dl_VISUAL_001_mesh_layer_1_vtx_2[56];
 extern Gfx castle_inside_dl_VISUAL_001_mesh_layer_1_tri_2[];
 extern Vtx castle_inside_dl_VISUAL_002_mesh_layer_1_vtx_0[16];
 extern Gfx castle_inside_dl_VISUAL_002_mesh_layer_1_tri_0[];

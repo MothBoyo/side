@@ -47,7 +47,6 @@ const LevelScript level_pss_entry[] = {
 		OBJECT(MODEL_BOWLING_BALL, -2388, -6818, 4440, 0, 0, 0, 0x00000000, bhvFireSpitter),
 		OBJECT(MODEL_BOWLING_BALL, 2471, -1681, 1793, 0, 0, 0, 0x00000000, bhvFireSpitter),
 		OBJECT(MODEL_RED_COIN, -4321, -5406, -1851, 0, 0, 0, 0x00000000, bhvRedCoin),
-		OBJECT(MODEL_NONE, 2442, -4600, -153, 0, 0, 0, (3 << 24), bhvHiddenRedCoinStar),
 		OBJECT(MODEL_RED_COIN, -2878, -5618, 4930, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 3371, -881, 2693, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 3612, -2082, -3559, 0, 0, 0, 0x00000000, bhvRedCoin),
@@ -55,10 +54,11 @@ const LevelScript level_pss_entry[] = {
 		OBJECT(MODEL_RED_COIN, 0, -3204, -2634, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, -5722, -6174, 1753, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 6414, -3847, -1042, 0, 0, 0, 0x00000000, bhvRedCoin),
+		OBJECT(MODEL_NONE, 2442, -4600, -153, 0, 0, 0, 0x00000000, bhvHiddenRedCoinStar),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 2442, -5000, 247, 0, -180, 0, (8 << 16), bhvWarpPipe),
 		TERRAIN(pss_area_1_collision),
 		MACRO_OBJECTS(pss_area_1_macro_objs),
-		STOP_MUSIC(0),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SLIDE),
 		TERRAIN_TYPE(TERRAIN_STONE),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
