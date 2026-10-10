@@ -385,4 +385,5 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "vanishblock3/geo_header.h"
 #include "vanishblock4/collision_header.h"
 #include "vanishblock4/geo_header.h"
+#include "mario/geo_header.h"
 #endif
