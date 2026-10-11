@@ -12,25 +12,22 @@
 #define SCRAM "scram--"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
-Wow! You're smack in the\n\
-middle of the battlefield.\n\
-You'll find the Power\n\
-Stars that Bowser stole\n\
-inside the painting\n\
-worlds.\n\
-First, talk to the\n\
-Bob-omb Buddy. (Press [B]\n\
-to talk.) He'll certainly\n\
-help you out, and so will\n\
-his " COMRADES " in other\n\
-areas.\n\
-To read signs, stop, face\n\
-them and press [B]. Press [A]\n\
-or [B] to scroll ahead. You\n\
-can talk to some other\n\
-characters by facing them\n\
-and pressing [B]."))
+DEFINE_DIALOG(DIALOG_000, 1, 5, 40, 200, _("\
+Welcome!\n\
+I assume that you're new,\n\
+so allow me to\n\
+explain how things work\n\
+around here.\n\
+Besides stars not kicking you\n\
+out of courses and fall damage\n\
+being non-existent, the 100\n\
+coin stars have been replaced\n\
+with these nifty boxes...\n\
+...You'll have to figure out\n\
+how to enable them first though,\n\
+so it seems. \n\
+\n\
+Good luck!"))
 
 DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
 Watch out! If you wander\n\
@@ -308,9 +305,9 @@ door. You need [%] more\n\
 Stars."))
 
 DEFINE_DIALOG(DIALOG_026, 1, 4, 95, 200, _("\
-It takes the power of\n\
-8 Stars to open this\n\
-door. You need [%] more\n\
+10 stars needed to enter\n\ 
+this manor.\n\
+You need [%] more\n\
 Stars."))
 
 DEFINE_DIALOG(DIALOG_027, 1, 4, 95, 200, _("\
@@ -1005,24 +1002,16 @@ and free us from this\n\
 awful prison!\n\
 Please!"))
 
-DEFINE_DIALOG(DIALOG_076, 1, 6, 30, 200, _("\
-Thanks to the power of\n\
-the Stars, life is\n\
-returning to the castle.\n\
-Please, Mario, you have\n\
-to give Bowser the boot!\n\
+DEFINE_DIALOG(DIALOG_076, 1, 3, 30, 200, _("\
+Recently I've been learning to\n\
+underwater basket-weave.\n\
 \n\
-Here, let me tell you a\n\
-little something about the\n\
-castle. In the room with\n\
-the mirrors, look carefully\n\
-for anything that's not\n\
-reflected in the mirror.\n\
-And when you go to the\n\
-water town, you can flood\n\
-it with a high jump into\n\
-the painting. Oh, by the\n\
-way, look what I found!"))
+Say what you will-\n\
+But I still get more fans than\n\
+Rom hackers do.\n\
+With all the donations i get,\n\
+I won't be needing this\n\
+anymore."))
 
 DEFINE_DIALOG(DIALOG_077, 1, 2, 150, 200, _("\
 It is decreed that one\n\
@@ -1064,35 +1053,36 @@ The city welcomes visitors\n\
 with the depth they bring\n\
 as they enter."))
 
-DEFINE_DIALOG(DIALOG_082, 1, 4, 30, 200, _("\
-Hold on to your hat! If\n\
-you lose it, you'll be\n\
-injured easily.\n\
+DEFINE_DIALOG(DIALOG_082, 1, 3, 30, 200, _("\
+Dozens of days, weeks, months\n\
+to create something beatable\n\
+in an hour.\n\
+Do you wonder whether they'll\n\
+even enjoy it?\n\
 \n\
-If you do lose your Cap,\n\
-you'll have to find it in\n\
-the course where you\n\
-lost it.\n\
-Oh, boy, it's not looking\n\
-good for Peach. She's\n\
-still trapped somewhere\n\
-inside the walls.\n\
-Please, Mario, you have\n\
-to help her! Did you know\n\
-that there are enemy\n\
-worlds inside the walls?\n\
-Yup. It's true. Bowser's\n\
-troops are there, too.\n\
-Oh, here, take this. I've\n\
-been keeping it for you."))
+How lame...\n\
+\n\
+\n\
+Take this consolation prize,\n\
+see if it changes anything,\n\
+Mario."))
 
-DEFINE_DIALOG(DIALOG_083, 1, 6, 30, 200, _("\
-There's something strange\n\
-about that clock. As you\n\
-jump inside, watch the\n\
-position of the big hand.\n\
-Oh, look what I found!\n\
-Here, Mario, catch!"))
+DEFINE_DIALOG(DIALOG_083, 1, 4, 40, 200, _("\
+Sup, Mario!\n\
+Let me tell you something-\n\
+This computer here is a real\n\
+gold mine!\n\
+It's where I get all of my\n\
+weed smoking girlfriends!\n\
+All i had to do was give\n\
+them my『credit card』info.\n\
+Dunno what that is or\n\
+what it does,\n\
+but it sure was worth exchanging\n\
+for true love!\n\
+Now that I've tasted romance,\n\
+I don't really care for this\n\
+shiny thing "))
 
 DEFINE_DIALOG(DIALOG_084, 1, 3, 30, 200, _("\
 Yeeoww! Unhand me,\n\
