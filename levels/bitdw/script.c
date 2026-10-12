@@ -114,7 +114,7 @@ const LevelScript level_bitdw_entry[] = {
 		OBJECT(MODEL_SNUFIT, 1142, 12262, -3367, 0, 0, 0, 0x00000000, bhvSnufit),
 		OBJECT(MODEL_SNUFIT, -1285, 5977, 3845, 0, 0, 0, 0x00000000, bhvSnufit),
 		OBJECT(MODEL_BITDW_SQUARE_PLATFORM, -250, 0, -2850, 0, 0, 0, 0x00000000, bhvSquarishPathMoving),
-		OBJECT(MODEL_NONE, 0, 200, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 0, 1000, 0, 0, 180, 0, 0x000A0000, bhvSpinAirborneWarp),
 		TERRAIN(bitdw_area_1_collision),
 		MACRO_OBJECTS(bitdw_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_BOSS_KOOPA),

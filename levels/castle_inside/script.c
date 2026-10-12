@@ -129,7 +129,7 @@ const LevelScript level_castle_inside_entry[] = {
 		OBJECT(MODEL_BLUE_COIN, 580, 3494, -7302, 0, 0, 0, 0x00000000, bhvHiddenCollectable),
 		OBJECT(MODEL_BLUE_COIN, 1080, 4094, -7802, 0, 0, 0, 0x00000000, bhvHiddenCollectable),
 		OBJECT(MODEL_BLUE_COIN, 1630, 4694, -7552, 0, 0, 0, 0x00000000, bhvHiddenCollectable),
-		OBJECT(MODEL_BLUE_COIN_SWITCH, -1470, 4594, -7752, 0, 0, 0, 0x00000000, bhvHiddenCollectableSwitch),
+		OBJECT(MODEL_BLUE_COIN_SWITCH, -1470, 4594, -7752, 0, 0, 0, (2 << 24), bhvHiddenCollectableSwitch),
 		OBJECT(MODEL_TOAD, 7643, 3110, 5492, 0, 52, 0, (76 << 24), bhvToadMessage),
 		OBJECT(MODEL_TOAD, 2180, 5594, -7202, 0, 180, 0, (82 << 24), bhvToadMessage),
 		OBJECT(MODEL_NONE, -1613, 2394, 2088, 0, 0, 0, (3 << 16), bhvGoombaTripletSpawner),

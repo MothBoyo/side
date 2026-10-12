@@ -12,20 +12,25 @@
 #define SCRAM "scram--"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 5, 40, 200, _("\
+DEFINE_DIALOG(DIALOG_000, 1, 7, 30, 200, _("\
 Welcome!\n\
 I assume that you're new,\n\
-so allow me to\n\
-explain how things work\n\
-around here.\n\
-Besides stars not kicking you\n\
-out of courses and fall damage\n\
-being non-existent, the 100\n\
-coin stars have been replaced\n\
-with these nifty boxes...\n\
-...You'll have to figure out\n\
-how to enable them first though,\n\
-so it seems. \n\
+so allow me to explain\n\
+how things work around\n\
+here.\n\
+\n\
+\n\
+Besides stars not kicking\n\
+you out of courses and\n\
+fall damage being\n\
+non-existent, the 100\n\
+coin stars have been\n\
+replaced with these\n\
+nifty boxes...\n\
+...You'll have to figure\n\
+out how to enable them\n\
+first though, so it\n\
+seems.\n\
 \n\
 Good luck!"))
 
@@ -1003,15 +1008,15 @@ awful prison!\n\
 Please!"))
 
 DEFINE_DIALOG(DIALOG_076, 1, 3, 30, 200, _("\
-Recently I've been learning to\n\
-underwater basket-weave.\n\
-\n\
+Recently I've been\n\
+learning to underwater\n\
+basket-weave.\n\
 Say what you will-\n\
-But I still get more fans than\n\
-Rom hackers do.\n\
-With all the donations i get,\n\
-I won't be needing this\n\
-anymore."))
+But I still get more fans\n\
+than Rom hackers do.\n\
+With all the donations I\n\
+get, I won't be\n\
+needing this anymore."))
 
 DEFINE_DIALOG(DIALOG_077, 1, 2, 150, 200, _("\
 It is decreed that one\n\
@@ -1053,36 +1058,44 @@ The city welcomes visitors\n\
 with the depth they bring\n\
 as they enter."))
 
-DEFINE_DIALOG(DIALOG_082, 1, 3, 30, 200, _("\
-Dozens of days, weeks, months\n\
-to create something beatable\n\
+DEFINE_DIALOG(DIALOG_082, 1, 4, 30, 200, _("\
+Dozens of days, weeks,\n\
+months to create\n\
+something beatable\n\
 in an hour.\n\
-Do you wonder whether they'll\n\
-even enjoy it?\n\
+Do you wonder whether\n\
+they'll even enjoy it?\n\
+\n\
 \n\
 How lame...\n\
 \n\
 \n\
-Take this consolation prize,\n\
-see if it changes anything,\n\
+\n\
+Take this consolation\n\
+prize, see if it\n\
+changes anything,\n\
 Mario."))
 
-DEFINE_DIALOG(DIALOG_083, 1, 4, 40, 200, _("\
+DEFINE_DIALOG(DIALOG_083, 1, 5, 40, 200, _("\
 Sup, Mario!\n\
+\n\
 Let me tell you something-\n\
-This computer here is a real\n\
-gold mine!\n\
+This computer here is a\n\
+real gold mine!\n\
 It's where I get all of my\n\
 weed smoking girlfriends!\n\
-All i had to do was give\n\
-them my『credit card』info.\n\
+All I had to do was give\n\
+them my 『credit card』\n\
+info.\n\
 Dunno what that is or\n\
-what it does,\n\
-but it sure was worth exchanging\n\
-for true love!\n\
-Now that I've tasted romance,\n\
-I don't really care for this\n\
-shiny thing "))
+what it does, but it\n\
+sure was worth\n\
+exchanging for true\n\
+love!\n\
+Now that I've tasted\n\
+romance, I don't really\n\
+care for this shiny\n\
+thing."))
 
 DEFINE_DIALOG(DIALOG_084, 1, 3, 30, 200, _("\
 Yeeoww! Unhand me,\n\
@@ -1874,46 +1887,24 @@ Whatever it is, it's\n\
 bugging me! I think I'll\n\
 blow it away!"))
 
-DEFINE_DIALOG(DIALOG_154, 1, 5, 30, 200, _("\
-Hold on to your hat! If\n\
-you lose it, you'll be\n\
-easily injured. If you\n\
-lose it, look for it in the\n\
-course where you lost it.\n\
-Speaking of lost, the\n\
-Princess is still stuck in\n\
-the walls somewhere.\n\
-Please help, Mario!\n\
-\n\
-Oh, you know that there\n\
-are secret worlds in the\n\
-walls as well as in the\n\
-paintings, right?"))
+DEFINE_DIALOG(DIALOG_154, 1, 1, 30, 200, _("\
+Have fun, if you can."))
 
-DEFINE_DIALOG(DIALOG_155, 1, 6, 30, 200, _("\
-Thanks to the power of\n\
-the Stars, life is\n\
-returning to the castle.\n\
-Please, Mario, you have\n\
-to give Bowser the boot!\n\
-\n\
-Here, let me tell you a\n\
-little something about the\n\
-castle. In the room with\n\
-the mirrors, look carefully\n\
-for anything that's not\n\
-reflected in the mirror.\n\
-And when you go to the\n\
-water town, you can flood\n\
-it with a high jump into\n\
-the painting."))
+DEFINE_DIALOG(DIALOG_155, 1, 2, 30, 200, _("\
+Don't you have more\n\
+stars to collect?\n\
+Shoo!"))
 
-DEFINE_DIALOG(DIALOG_156, 1, 5, 30, 200, _("\
-The world inside the\n\
-clock is so strange!\n\
-When you jump inside,\n\
-watch the position of\n\
-the big hand!"))
+DEFINE_DIALOG(DIALOG_156, 1, 3, 30, 200, _("\
+Are you perhaps\n\
+jealous, Mario?\n\
+\n\
+Can't blame you!\n\
+\n\
+\n\
+...I just hope\n\
+they won't leave\n\
+me..."))
 
 DEFINE_DIALOG(DIALOG_157, 1, 5, 30, 200, _("\
 Watch out! Don't let\n\
