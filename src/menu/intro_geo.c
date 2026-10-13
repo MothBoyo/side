@@ -103,7 +103,7 @@ Gfx *geo_intro_tm_copyright(s32 callContext, struct GraphNode *node, UNUSED void
             SET_GRAPH_NODE_LAYER(graphNode->flags, LAYER_TRANSPARENT);
             gDPSetRenderMode(dlIter++, G_RM_AA_XLU_SURF, G_RM_AA_XLU_SURF2);
         }
-        gSPDisplayList(dlIter++, &intro_seg7_dl_copyright_trademark); // draw model
+        //gSPDisplayList(dlIter++, &intro_seg7_dl_copyright_trademark); // draw model
         gSPEndDisplayList(dlIter);
 
         // Once the "Super Mario 64" logo has just about zoomed fully, fade in the "TM" and copyright text
