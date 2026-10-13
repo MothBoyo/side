@@ -1,4 +1,4 @@
-const Collision bitdw_area_2_collision[] = {
+const Collision bitdw_area_8_collision[] = {
 	COL_INIT(),
 	COL_VERTEX_INIT(805),
 	COL_VERTEX(2450, -7000, 2250),

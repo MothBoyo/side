@@ -64,7 +64,7 @@ const LevelScript level_bitdw_entry[] = {
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, bitdw_area_1),
-		WARP_NODE(0x00, LEVEL_BITDW, 0x02, 0x00, WARP_CHECKPOINT),
+		WARP_NODE(0x00, LEVEL_BITDW, 0x08, 0x00, WARP_CHECKPOINT),
 		WARP_NODE(241, LEVEL_CASTLE, 0x02, 103, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_AMP, 0, 100, -2600, 0, 0, 0, 0x00000000, bhvCirclingAmp),
 		OBJECT(MODEL_AMP, 0, 100, -2600, 0, 0, 0, 0x00000000, bhvCirclingAmp),
@@ -122,8 +122,8 @@ const LevelScript level_bitdw_entry[] = {
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
 	END_AREA(),
-	AREA(2, bitdw_area_2),
-		WARP_NODE(0x00, LEVEL_BITDW, 0x02, 0x00, WARP_NO_CHECKPOINT),
+	AREA(8, bitdw_area_8),
+		WARP_NODE(0x00, LEVEL_BITDW, 0x08, 0x00, WARP_NO_CHECKPOINT),
 		WARP_NODE(241, LEVEL_BITDW, 0x01, 0x00, WARP_NO_CHECKPOINT),
 		WARP_NODE(1, LEVEL_ENDING, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_STAR, -5732, 5304, 4589, 0, 0, 0, (1 << 16), bhvWarp),
@@ -133,8 +133,8 @@ const LevelScript level_bitdw_entry[] = {
 		OBJECT(MODEL_BITDW_SQUARE_PLATFORM, -3500, -4401, -4500, 0, 0, 0, 0x00000000, bhvSquarishPathMoving),
 		OBJECT(MODEL_BITDW_SQUARE_PLATFORM, 6281, 1787, 1508, 0, 0, 0, 0x00000000, bhvSquarishPathMoving),
 		OBJECT(MODEL_NONE, 2000, -6000, 3000, 0, 0, 0, 0x00000000, bhvSpinAirborneWarp),
-		TERRAIN(bitdw_area_2_collision),
-		MACRO_OBJECTS(bitdw_area_2_macro_objs),
+		TERRAIN(bitdw_area_8_collision),
+		MACRO_OBJECTS(bitdw_area_8_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_BOSS),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
