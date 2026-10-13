@@ -310,7 +310,7 @@ door. You need [%] more\n\
 Stars."))
 
 DEFINE_DIALOG(DIALOG_026, 1, 4, 95, 200, _("\
-10 stars needed to enter\n\ 
+10 stars needed to enter\n\
 this manor.\n\
 You need [%] more\n\
 Stars."))
