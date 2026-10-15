@@ -22,7 +22,7 @@
  * Enables a comprehensive standalone profiler. Automatically enabled by PUPPYPRINT_DEBUG.
  * If not using PUPPYPRINT_DEBUG, press L + D-Pad Up to toggle the profiler.
  */
-#define USE_PROFILER
+//#define USE_PROFILER
 
 /**
  * -- TEST LEVEL --
@@ -40,7 +40,7 @@
 /**
  * Enables debug free move (D-pad up to enter, A to exit).
  */
-#define ENABLE_DEBUG_FREE_MOVE
+//#define ENABLE_DEBUG_FREE_MOVE
 
 /**
  * Enables a custom, enhanced performance profiler. (Enables PUPPYPRINT by default in config_safeguards).

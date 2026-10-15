@@ -1,6 +1,6 @@
 #ifndef CAMERA_H
 #define CAMERA_H
-
+//w
 #include <PR/ultratypes.h>
 
 #include "types.h"
@@ -574,6 +574,14 @@ struct CutsceneVariable {
 };
 
 /**
+ * COLLISION CAMERA function of COLLISION CAMERA
+ */
+struct CamCollisionProgress {
+    f32 xz;
+    f32 y;
+};
+
+/**
  * The main camera struct. Gets updated by the active camera mode and the current level/area. In
  * update_lakitu, its pos and focus are used to calculate lakitu's next position and focus, which are
  * then used to render the game.
@@ -607,6 +615,8 @@ struct Camera {
     /// The y coordinate of the "center" of the area. Unlike areaCenX and areaCenZ, this is only used
     /// when paused. See zoom_out_if_paused_and_outside
     /*0x68*/ f32 areaCenY;
+    Vec3f paraCamOrigPos; //CUSTOM COL CAMERA
+    struct CamCollisionProgress camCollisionProgress; //CUSTOM COL CAMERA
 };
 
 /**
