@@ -2472,7 +2472,7 @@ Gfx mat_revert_pss_dl_VULCANO_WALLS_layer1[] = {
 };
 
 Gfx mat_pss_dl_VANISHING_FLOOR_layer1[] = {
-	gsSPClearGeometryMode(G_LIGHTING | G_CULL_BACK),
+	gsSPClearGeometryMode(G_CULL_BACK | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, TEXEL0, 0, TEXEL1, 0, 0, 0, 0, SHADE, 0, 0, 0, COMBINED),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -2493,7 +2493,7 @@ Gfx mat_pss_dl_VANISHING_FLOOR_layer1[] = {
 };
 
 Gfx mat_revert_pss_dl_VANISHING_FLOOR_layer1[] = {
-	gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK | G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetCycleType(G_CYC_1CYCLE),

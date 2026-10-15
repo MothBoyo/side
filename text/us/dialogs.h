@@ -34,26 +34,39 @@ seems.\n\
 \n\
 Good luck!"))
 
-DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
-Watch out! If you wander\n\
-around here, you're liable\n\
-to be " PLASTERED " by a\n\
-water bomb!\n\
-Those enemy Bob-ombs love\n\
-to fight, and they're\n\
-always finding ways to\n\
-attack.\n\
-This meadow has become\n\
-a battlefield ever since\n\
-the Big Bob-omb got his\n\
-paws on the Power Star.\n\
-Can you recover the Star\n\
-for us? Cross the bridge\n\
-and go left up the path\n\
-to find the Big Bob-omb.\n\
-Please come back to see\n\
-me after you've retrieved\n\
-the Power Star!"))
+DEFINE_DIALOG(DIALOG_001, 1, 6, 95, 200, _("\
+CREDITS\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+CODE AND CUSTOM\n\
+OBJECTS:\n\
+- gamebyte\n\
+- Quella the Quail\n\
+- LolaPookie\n\
+\n\
+MUSIC TRACKS BY:\n\
+- Scut\n\
+- SM64pie\n\
+- Blocko\n\
+- ShrooboidBrat\n\
+- Cryogen\n\
+PLAYTESTERS:\n\
+- Quella the Quail\n\
+- ElectricYV\n\
+- Dolphino\n\
+- Tselynnium\n\
+- TheGreatSamux\n\
+- Lanayxy\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+Logo and star models\n\
+by ElectricYV"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
 Hey, you! It's dangerous\n\
@@ -167,14 +180,14 @@ Ready?\n\
 //Go//// Don't Go"))
 
 DEFINE_DIALOG(DIALOG_010, 1, 4, 30, 200, _("\
-You've stepped on the\n\
-Wing Cap Switch. Wearing\n\
-the Wing Cap, you can\n\
-soar through the sky.\n\
-Now Wing Caps will pop\n\
-out of all the red blocks\n\
-you find.\n\
+You've pressed the\n\
+Challenge Switch!\n\
 \n\
+\n\
+Extra stars can now\n\
+be found in four\n\
+different red boxes.\n\
+\n\ 
 Would you like to Save?\n\
 \n\
 //Yes////No"))
@@ -205,20 +218,15 @@ Would you like to Save?\n\
 \n\
 //Yes////No"))
 
-DEFINE_DIALOG(DIALOG_013, 1, 5, 30, 200, _("\
-You've collected 100\n\
-coins! Mario gains more\n\
-power from the castle.\n\
+DEFINE_DIALOG(DIALOG_013, 1, 4, 30, 200, _("\
+You've collected the\n\
+challenge star!\n\
 Do you want to Save?\n\
 //Yes////No"))
 
-DEFINE_DIALOG(DIALOG_014, 1, 4, 30, 200, _("\
-Wow! Another Power Star!\n\
-Mario gains more courage\n\
-from the power of the\n\
-castle.\n\
-Do you want to Save?\n\
-\n\
+DEFINE_DIALOG(DIALOG_014, 1, 3, 30, 200, _("\
+Star collected!\n\
+Wanna save?\n\
 //You Bet//Not Now"))
 
 DEFINE_DIALOG(DIALOG_015, 1, 4, 30, 200, _("\
@@ -287,9 +295,8 @@ Now " SCRAM "\n\
 and don't come back!\n\
 Gwa ha ha!"))
 
-DEFINE_DIALOG(DIALOG_022, 1, 2, 95, 200, _("\
-You need a key to open\n\
-this door."))
+DEFINE_DIALOG(DIALOG_022, 1, 1, 95, 200, _("\
+10 stars needed!"))
 
 DEFINE_DIALOG(DIALOG_023, 1, 3, 95, 200, _("\
 This key doesn't fit!\n\

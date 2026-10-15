@@ -140,7 +140,7 @@ static void toad_message_talking(void) {
                 break;
             case TOAD_STAR_3_DIALOG:
                 o->oToadMessageDialogId = TOAD_STAR_3_DIALOG_AFTER;
-                bhv_spawn_star_no_level_exit(STAR_BP_ACT_4);
+                bhv_spawn_star_no_level_exit(STAR_BP_ACT_3);
                 break;
         }
     }
