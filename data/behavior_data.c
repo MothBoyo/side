@@ -6142,7 +6142,7 @@ const BehaviorScript bhvNoteblock[] = {
     END_LOOP(),
 };
 
-extern void bhv_onoffswitch(void);
+extern void bhv_onoffswitch(void); //WTF
 extern const Collision onoffcol_collision[]; /* declare this */
 const BehaviorScript bhvOnOffButton[] = {
     BEGIN(OBJ_LIST_SURFACE),
@@ -6157,7 +6157,7 @@ const BehaviorScript bhvOnOffButton[] = {
     END_LOOP(),
 };
 
-extern void bhv_onoffblock(void);
+extern void bhv_onoffblock(void); //Wtf
 const BehaviorScript bhvOnOffBlock[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
@@ -6236,7 +6236,9 @@ const BehaviorScript bhvGreenPlatformCircularManager[] = {
     OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_FLOAT(oDrawingDistance, 10000),
     CALL_NATIVE(green_platform_manager_init),
-    BREAK(),
+    BEGIN_LOOP(),
+        CALL_NATIVE(green_platform_manager_init),
+    END_LOOP(),
 };
 
 const BehaviorScript bhvGreenPlatformCircular[] = {

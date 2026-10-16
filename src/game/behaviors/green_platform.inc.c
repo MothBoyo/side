@@ -20,6 +20,8 @@ void green_platform_circular_horizontal(void) {
 
 // Executed once, this spawns the platforms and their behavior !
 void green_platform_manager_init(void) {
+
+	if (o->oTimer == 0) {
 	int i;
 	struct Object *curPlatform;
 
@@ -34,6 +36,9 @@ void green_platform_manager_init(void) {
 				curPlatform->oBehParams = o->oBehParams; // assign parameters to the platform
 				curPlatform->oGreenPlatformAmount = CLAMP(o->oBehParams2ndByte, i+1, 255); // assigning ID and ammount to determine where to place them in the circular path
 				curPlatform->oGreenPlatformID = i+1; // assigning ID and ammount to determine where to place them in the circular path
+
+				curPlatform->respawnInfo = NULL; //fix
+				curPlatform->respawnInfoType = RESPAWN_INFO_TYPE_NULL;
 			}
 			o->oFaceAngleRoll = 0x4000; // Rotate track 90° on Z axis to make it rest flat
 		break;
@@ -45,9 +50,13 @@ void green_platform_manager_init(void) {
 				curPlatform->oBehParams = o->oBehParams; // assign parameters to the platform
 				curPlatform->oGreenPlatformAmount = CLAMP(o->oBehParams2ndByte, i+1, 255); // assigning ID and ammount to determine where to place them in the circular path
 				curPlatform->oGreenPlatformID = i+1; // assigning ID and ammount to determine where to place them in the circular path
+
+				curPlatform->respawnInfo = NULL; //fix
+				curPlatform->respawnInfoType = RESPAWN_INFO_TYPE_NULL;
 			}
 		break;
 		
+	}
 	}
 }
 

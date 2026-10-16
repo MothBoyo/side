@@ -470,7 +470,10 @@ void spawn_objects_from_info(UNUSED s32 unused, struct SpawnInfo *spawnInfo) {
 
         //clear the respawn flag in index 8, so always looks like new objects
         if (gCurrAreaIndex == 8) {
-            spawnInfo->behaviorArg &= ~(RESPAWN_INFO_DONT_RESPAWN << 8);
+            //hardcoded shit
+            if (script != segmented_to_virtual(bhvGreenPlatformCircularManager)) {
+                spawnInfo->behaviorArg &= ~(RESPAWN_INFO_DONT_RESPAWN << 8);
+            }
         }
 
         // If the object was previously killed/collected, don't respawn it
