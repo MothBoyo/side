@@ -175,6 +175,7 @@ const LevelScript level_wf_entry[] = {
 		OBJECT(MODEL_NONE, -4250, 1000, 0, 0, 0, 0, (8 << 16), bhvSpinAirborneWarp),
 		OBJECT(MODEL_STAR, 3250, 3200, 0, 0, 0, 0, (6 << 24), bhvStar),
 		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, (35 << 16), bhvCountdownTimer),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x00000000, bhv2dCameraForce),
 		TERRAIN(wf_area_8_collision),
 		MACRO_OBJECTS(wf_area_8_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_RACE),

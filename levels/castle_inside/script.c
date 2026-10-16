@@ -85,7 +85,7 @@ const LevelScript level_castle_inside_entry[] = {
 		OBJECT(MODEL_NONE, -2757, 4594, -8207, 0, 0, 0, (2 << 16), bhvCoinFormation),
 		OBJECT(MODEL_NONE, 1500, 91, 8000, 0, 0, 0, (2 << 16), bhvCoinFormation),
 		OBJECT(MODEL_NONE, 9264, 1360, 5057, 0, 0, 0, (2 << 16), bhvCoinFormation),
-		OBJECT(MODEL_WOODEN_SIGNPOST, 118, -300, 6512, 0, 0, 0, (1 << 16), bhvMessagePanel),
+		OBJECT(MODEL_WOODEN_SIGNPOST, 118, -300, 6512, 0, 0, 0, (87 << 16), bhvMessagePanel),
 		OBJECT(MODEL_CASTLE_GROUNDS_CASTLE_DOOR, -2845, 4594, -8652, 0, 0, 0, (7 << 16), bhvDoorWarp),
 		OBJECT(MODEL_CASTLE_GROUNDS_CASTLE_DOOR, -2695, 4594, -8652, 0, -180, 0, (8 << 16), bhvDoorWarp),
 		OBJECT(MODEL_CASTLE_STAR_DOOR_8_STARS, -1870, 4594, -8027, 0, 90, 0, (10 << 24), bhvStarDoor),

@@ -124,6 +124,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_NONE, -200, 2650, 300, 0, 0, 0, 0x00000000, bhvFlipswap),
 		OBJECT(MODEL_NONE, 275, 4250, -300, 0, 0, 0, 0x00000000, bhvFlipswap),
 		OBJECT(MODEL_STAR, 1188, 4700, 0, 0, 0, 0, (4 << 24), bhvStar),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x00000000, bhv2dCameraForce),
 		TERRAIN(bob_area_2_collision),
 		MACRO_OBJECTS(bob_area_2_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),

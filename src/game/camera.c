@@ -408,6 +408,7 @@ u8 sFramesSinceCutsceneEnded = 0;
  */
 u8 sCutsceneDialogResponse = DIALOG_RESPONSE_NONE;
 struct PlayerCameraState *sMarioCamState = &gPlayerCameraState[0];
+// struct PlayerCameraState *sLuigiCamState = &gPlayerCameraState[1];
 Vec3f sFixedModeBasePosition    = { 646.0f, 143.0f, -1513.0f };
 
 s32 update_radial_camera(struct Camera *c, Vec3f focus, Vec3f pos);
@@ -935,15 +936,18 @@ void radial_camera_move(struct Camera *c) {
         areaDistZ = -areaDistZ;
     }
 
-
+    // Avoid obstructing walls
     s32 avoidStatus = rotate_camera_around_walls(c, c->pos, &avoidYaw, 0x400);
     if (avoidStatus == AVOID_STATUS_WALL_COVERING_MARIO) {
         if (avoidYaw - atan2s(areaDistZ, areaDistX) + DEGREES(90) < 0) {
             avoidYaw += DEGREES(180);
         }
 
+        // We want to change sModeOffsetYaw so that the player is no longer obstructed by the wall.
+        // So, we make avoidYaw relative to the yaw around the area center
         avoidYaw -= atan2s(areaDistZ, areaDistX);
 
+        // Bound avoid yaw to radial mode constraints
         if (avoidYaw > DEGREES(105)) {
             avoidYaw = DEGREES(105);
         }
@@ -1112,8 +1116,8 @@ s32 snap_to_45_degrees(s16 angle) {
     return angle;
 }
 
-#define MIN_CAMERA_DISTANCE 160.0f // CUSTOM CAMERA COL
-#define VERTICAL_RAY_OFFSET 300.0f // 300 UNITS OVER MARIO CUSTOM CAMERA COL
+#define MIN_CAMERA_DISTANCE 160.0f 
+#define VERTICAL_RAY_OFFSET 300.0f 
 
 static void cam_collision_advance(f32 *val) {
     *val -= 0.2f;
@@ -1122,10 +1126,7 @@ static void cam_collision_advance(f32 *val) {
     }
 }
 
-/**
- * Btiy qopkzr ta ehoh zpgw tlv U cxm (brz byp qyprsahtbreqan zvc, lz'a afaf tnoh ouwbd jmd obudsm)
- */
-// courtesy of ReonuCam but rewritten for my usecases //courtesy of idk I just DEBLOATED LOT OF SHIT!
+// camera collision
 static void camera_collision_handler(struct Camera *c)
 {
     struct Surface *surf;
@@ -1215,9 +1216,6 @@ static void camera_collision_handler(struct Camera *c)
     c->yaw = atan2s(c->pos[2] - gMarioState->pos[2], c->pos[0] - gMarioState->pos[0]);
 }
 
-
-
-
 /**
  * A mode that only has 8 camera angles, 45 degrees apart
  */
@@ -1259,6 +1257,7 @@ void mode_8_directions_camera(struct Camera *c) {
     sAreaYawChange = sAreaYaw - oldAreaYaw;
     set_camera_height(c, pos[1]);
 
+    //store pos no col than col handlea
     vec3f_copy(c->paraCamOrigPos, c->pos);
     camera_collision_handler(c);
 }
@@ -2869,6 +2868,10 @@ void set_camera_mode(struct Camera *c, s16 mode, s16 frames) {
     if (c->mode == CAMERA_MODE_STATIC) {
         return;
     }
+    //added that 
+    if (c->mode == CAMERA_MODE_2D) {
+        return;
+    }    
 
     struct LinearTransitionPoint *start = &sModeInfo.transitionStart;
     struct LinearTransitionPoint *end = &sModeInfo.transitionEnd;
@@ -2940,6 +2943,7 @@ void update_lakitu(struct Camera *c) {
     s16 newYaw;
 
     if (!(gCameraMovementFlags & CAM_MOVE_PAUSE_SCREEN)) {
+        //interpolate
         Vec3f realCamPos;
         realCamPos[0] = c->pos[0] * (1.f - c->camCollisionProgress.xz) + c->paraCamOrigPos[0] * c->camCollisionProgress.xz;
         realCamPos[1] = c->pos[1] * (1.f - c->camCollisionProgress.y ) + c->paraCamOrigPos[1] * c->camCollisionProgress.y ;
@@ -3102,7 +3106,10 @@ void update_camera(struct Camera *c) {
             }
         }
     }
-
+    // check mario cam and reonu cam an puppy cam and para cam and kaze cam and cat cam and blumiere cam
+    if (c->cutscene != CUTSCENE_NONE || (sSelectionFlags & CAM_MODE_MARIO_ACTIVE) || c->mode != CAMERA_MODE_8_DIRECTIONS) {
+        c->camCollisionProgress = (struct CamCollisionProgress){ 0.f, 0.f };
+    }
     // If not in a cutscene, do mode processing
     if (c->cutscene == CUTSCENE_NONE) {
         sYawSpeed = 0x400;
@@ -3580,7 +3587,7 @@ void create_camera(struct GraphNodeCamera *gc, struct AllocOnlyPool *pool) {
     c->areaCenY = gc->focus[1];
     c->areaCenZ = gc->focus[2];
     c->yaw = 0;
-    c->camCollisionProgress = (struct CamCollisionProgress){};
+    c->camCollisionProgress = (struct CamCollisionProgress){ 0.f, 0.f };
     vec3f_copy(c->pos, gc->pos);
     vec3f_copy(c->paraCamOrigPos, gc->pos);
     vec3f_copy(c->focus, gc->focus);
@@ -6022,10 +6029,7 @@ void surface_type_modes_thi(struct Camera *c) {
  * exit. Using hyperspeed, the earlier area can be directly exited from, keeping the changes it applies.
  */
 struct CameraTrigger sCamSL[] = {
-    { 1, cam_sl_snowman_head_8dir, 1119, 3584, 1125, 1177, 358, 358, -0x1D27 },
-    // This trigger surrounds the previous one
-    { 1, cam_sl_free_roam, 1119, 3584, 1125, 4096, 4096, 4096, -0x1D27 },
-    NULL_TRIGGER
+	NULL_TRIGGER
 };
 
 /**
@@ -10500,24 +10504,24 @@ u8 sDanceCutsceneIndexTable[][4] = {
 u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // BBH            | CCM
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // CASTLE_INSIDE  | HMC
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // BBH            | CCM
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // CASTLE_INSIDE  | HMC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // JRB            | THI
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // CASTLE_GROUNDS | BITDW
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // VCUTM          | BITFS
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // VCUTM          | BITFS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // SA             | BITS
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // LLL            | DDD
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // WF             | ENDING
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COURTYARD      | PSS
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COTMC          | TOTWC
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // COURTYARD      | PSS
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // COTMC          | TOTWC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // BOWSER_1       | WMOTR
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // Unused         | BOWSER_2
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // BOWSER_3       | Unused
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // TTM            | Unused
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // Unused         | Unused
+	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // Unused         | Unused
 };
 
 STATIC_ASSERT(ARRAY_COUNT(sZoomOutAreaMasks) - 1 == LEVEL_MAX / 2, "Make sure you edit sZoomOutAreaMasks when adding / removing courses.");

@@ -6337,3 +6337,13 @@ const BehaviorScript bhvHiddenCollectable[] = {
         ADD_INT(oAnimState, 1),
     END_LOOP(),
 };
+
+
+//2D camera forced! //added that to avoid removing forcecameramode
+const BehaviorScript bhv2dCameraForce[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_2d_camera_force_loop),
+    END_LOOP(),
+};

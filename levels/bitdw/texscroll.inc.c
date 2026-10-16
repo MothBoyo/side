@@ -70,7 +70,7 @@ void scroll_bitdw_dl_VISUAL_mesh_layer_5_vtx_0() {
 	int deltaY;
 	Vtx *vertices = segmented_to_virtual(bitdw_dl_VISUAL_mesh_layer_5_vtx_0);
 
-	deltaY = (int)(0.5 * 0x20) % height;
+	deltaY = (int)(0.25 * 0x20) % height;
 
 	if (absi(currentY) > height) {
 		deltaY -= (int)(absi(currentY) / height) * height * signum_positive(deltaY);

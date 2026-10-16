@@ -58,6 +58,7 @@ const LevelScript level_wmotr_entry[] = {
 		OBJECT(MODEL_SYNC_BLOCK, 2800, 1500, 0, 0, 0, 0, (2 << 24), bhvSyncBlock),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 11450, 4000, 0, 0, 0, 0, (3 << 16), bhvWarpPipe),
 		OBJECT(MODEL_NONE, -10300, 1000, 0, 0, 90, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x00000000, bhv2dCameraForce),
 		TERRAIN(wmotr_area_1_collision),
 		MACRO_OBJECTS(wmotr_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SPOOKY),

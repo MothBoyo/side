@@ -1130,11 +1130,39 @@ Running around in circles\n\
 makes some bad guys roll\n\
 their eyes."))
 
-DEFINE_DIALOG(DIALOG_087, 1, 4, 30, 200, _("\
-Santa Claus isn't the only\n\
-one who can go down a\n\
-chimney! Come on in!\n\
-/--Cabin Proprietor"))
+DEFINE_DIALOG(DIALOG_087, 1, 6, 30, 200, _("\
+CREDITS\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+CODE AND CUSTOM\n\
+OBJECTS:\n\
+- gamebyte\n\
+- Quella the Quail\n\
+- LolaPookie\n\
+\n\
+MUSIC TRACKS BY:\n\
+- Scut\n\
+- SM64pie\n\
+- Blocko\n\
+- ShrooboidBrat\n\
+- Cryogen\n\
+PLAYTESTERS:\n\
+- Quella the Quail\n\
+- ElectricYV\n\
+- Dolphino\n\
+- Tselynnium\n\
+- TheGreatSamux\n\
+- Lanayxy\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+Logo and star models\n\
+by ElectricYV"))
 
 DEFINE_DIALOG(DIALOG_088, 1, 5, 30, 200, _("\
 Work Elevator\n\

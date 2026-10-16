@@ -91,6 +91,7 @@ const LevelScript level_vcutm_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 15925, 2800, 4725, 0, 0, 0, (3 << 16), bhvWarpPipe),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 15925, 2800, 3875, 0, 0, 0, (3 << 16), bhvWarpPipe),
 		OBJECT(MODEL_NONE, -16000, 1500, 4725, 0, -90, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x00000000, bhv2dCameraForce),
 		TERRAIN(vcutm_area_1_collision),
 		MACRO_OBJECTS(vcutm_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_EVENT_POWERUP),

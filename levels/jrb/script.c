@@ -183,6 +183,7 @@ const LevelScript level_jrb_entry[] = {
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 9275, 1700, 4625, 0, -90, 0, (3 << 16), bhvWarpPipe),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, 9275, 1700, 3925, 0, -90, 0, (3 << 16), bhvWarpPipe),
 		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -10730, 0, 4075, 0, -90, 0, (3 << 16), bhvWarpPipe),
+		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x00000000, bhv2dCameraForce),
 		TERRAIN(jrb_area_4_collision),
 		MACRO_OBJECTS(jrb_area_4_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SNOW),

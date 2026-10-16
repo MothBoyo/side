@@ -1,6 +1,6 @@
 #ifndef CAMERA_H
 #define CAMERA_H
-//w
+
 #include <PR/ultratypes.h>
 
 #include "types.h"
@@ -27,8 +27,7 @@
 #define LEVEL_AREA_INDEX(levelNum, areaNum) (((levelNum) << 4) + (areaNum))
 
 /**
- * Helper macro for defining which areas of a level should zoom out the camera when the game is paused.
- * Because a mask is used by two levels, the pattern will repeat when more than 4 areas are used by a level.
+
  */
 #define ZOOMOUT_AREA_MASK(level1Area1, level1Area2, level1Area3, level1Area4, \
                           level2Area1, level2Area2, level2Area3, level2Area4) \
@@ -574,7 +573,7 @@ struct CutsceneVariable {
 };
 
 /**
- * COLLISION CAMERA function of COLLISION CAMERA
+ * Progreso de la colision de camara (0 = usa c->pos colisionado, 1 = usa la pos original sin colision).
  */
 struct CamCollisionProgress {
     f32 xz;
@@ -615,8 +614,9 @@ struct Camera {
     /// The y coordinate of the "center" of the area. Unlike areaCenX and areaCenZ, this is only used
     /// when paused. See zoom_out_if_paused_and_outside
     /*0x68*/ f32 areaCenY;
-    Vec3f paraCamOrigPos; //CUSTOM COL CAMERA
-    struct CamCollisionProgress camCollisionProgress; //CUSTOM COL CAMERA
+    /// Posicion de la camara ANTES de aplicar la colision (para suavizar la transicion)
+    Vec3f paraCamOrigPos;
+    struct CamCollisionProgress camCollisionProgress;
 };
 
 /**

@@ -564,5 +564,6 @@ extern const BehaviorScript bhvPurpleCoin[];
 extern const BehaviorScript bhvPurpleCometManager[];
 extern const BehaviorScript bhvHiddenCollectableSwitch[];
 extern const BehaviorScript bhvHiddenCollectable[];
+extern const BehaviorScript bhv2dCameraForce[]; //added that to avoid removing forcecameramode
 
 #endif // BEHAVIOR_DATA_H

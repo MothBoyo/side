@@ -66,6 +66,15 @@ void bhv_2d_camera_loop(void) {
 
 
 
+void bhv_2d_camera_force_loop(void) {
+    //force 2d cam mode
+    gCamera->mode    = CAMERA_MODE_2D;
+    gCamera->defMode = CAMERA_MODE_2D;
+
+}
+
+
+
 void bhv_2d_mode_loop(void) {
     if (o->oBehParams2ndByte == 0) {
     gMarioState->pos[0] = o->oPosX; 
