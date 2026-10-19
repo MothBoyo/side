@@ -186,8 +186,8 @@ const Gfx capswitch_seg5_dl_05003280[] = {
 
 // 0x05003350 - 0x05003370
 const Gfx capswitch_seg5_dl_05003350[] = {
-    gsSPLightColor(LIGHT_1, 0xff0000ff),
-    gsSPLightColor(LIGHT_2, 0x3f0000ff),
+    gsSPLightColor(LIGHT_1, 0xFF5500ff),
+    gsSPLightColor(LIGHT_2, 0xB33C00ff),
     gsSPDisplayList(capswitch_seg5_dl_05003280),
     gsSPEndDisplayList(),
 };

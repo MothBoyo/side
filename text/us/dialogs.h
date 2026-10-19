@@ -186,7 +186,7 @@ Challenge Switch!\n\
 \n\
 Extra stars can now\n\
 be found in four\n\
-different red boxes.\n\
+different orange boxes.\n\
 \n\ 
 Would you like to Save?\n\
 \n\

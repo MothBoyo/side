@@ -78,8 +78,8 @@ const Gfx exclamation_box_outline_seg8_dl_08024F58[] = {
 // 0x08024F88 - 0x08024FA8
 const Gfx exclamation_box_outline_seg8_dl_08024F88[] = {
     gsSPDisplayList(exclamation_box_outline_seg8_dl_08024F30),
-    gsSPLightColor(LIGHT_1, 0xff0000ff),
-    gsSPLightColor(LIGHT_2, 0x7f0000ff),
+    gsSPLightColor(LIGHT_1, 0xFF5500ff),
+    gsSPLightColor(LIGHT_2, 0xB33C00ff),
     gsSPBranchList(exclamation_box_outline_seg8_dl_08024F58),
 };
 
