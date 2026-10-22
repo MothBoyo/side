@@ -12,25 +12,30 @@
 #define SCRAM "scram--"
 #endif
 
-DEFINE_DIALOG(DIALOG_000, 1, 7, 30, 200, _("\
+DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
 Welcome!\n\
 I assume that you're new,\n\
 so allow me to explain\n\
 how things work around\n\
 here.\n\
 \n\
-\n\
 Besides stars not kicking\n\
 you out of courses and\n\
 fall damage being\n\
-non-existent, the 100\n\
-coin stars have been\n\
+non-existent, you can\n\
+see star names in a\n\
+stage by pausing.\n\
+On top of all\n\
+that, the 100 coin\n\
+stars have been\n\
 replaced with these\n\
 nifty boxes...\n\
+\n\
 ...You'll have to figure\n\
 out how to enable them\n\
 first though, so it\n\
 seems.\n\
+\n\
 \n\
 Good luck!"))
 
