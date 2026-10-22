@@ -30,7 +30,7 @@ void set_background_music(u16 a, u16 seqArgs, s16 fadeTimer);
 void fadeout_music(s16 fadeOutTime);
 void fadeout_level_music(s16 fadeTimer);
 void play_cutscene_music(u16 seqArgs);
-void play_shell_music(void);
+//void play_shell_music(void);
 void stop_shell_music(void);
 void play_cap_music(u16 seqArgs);
 void fadeout_cap_music(void);

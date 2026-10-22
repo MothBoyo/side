@@ -283,10 +283,10 @@ void play_cutscene_music(u16 seqArgs) {
 /**
  * Called from threads: thread5_game_loop
  */
-void play_shell_music(void) {
-    play_music(SEQ_PLAYER_LEVEL, SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP | SEQ_VARIATION), 0);
-    sCurrentShellMusic = SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP | SEQ_VARIATION);
-}
+//void play_shell_music(void) {
+//    play_music(SEQ_PLAYER_LEVEL, SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP | SEQ_VARIATION), 0);
+//    sCurrentShellMusic = SEQUENCE_ARGS(4, SEQ_EVENT_POWERUP | SEQ_VARIATION);
+//}
 
 /**
  * Called from threads: thread5_game_loop
