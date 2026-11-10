@@ -49,3 +49,7 @@
 #include "vanishblock2/geo.inc.c"
 #include "vanishblock3/geo.inc.c"
 #include "vanishblock4/geo.inc.c"
+#include "sync_block_pink/geo.inc.c"
+#include "sync_block_pink_beep/geo.inc.c"
+#include "sync_block_blue_beep/geo.inc.c"
+#include "sync_block_blue/geo.inc.c"

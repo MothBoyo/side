@@ -1,0 +1,13 @@
+extern const GeoLayout sync_block_pink_geo[];
+extern u8 sync_block_pink_SyncBlock_i8[];
+extern Vtx sync_block_pink_sync_block_pink_vis_mesh_layer_1_vtx_cull[8];
+extern Vtx sync_block_pink_sync_block_pink_vis_mesh_layer_1_vtx_0[24];
+extern Gfx sync_block_pink_sync_block_pink_vis_mesh_layer_1_tri_0[];
+extern Vtx sync_block_pink_sync_block_pink_vis_mesh_layer_1_vtx_1[96];
+extern Gfx sync_block_pink_sync_block_pink_vis_mesh_layer_1_tri_1[];
+extern Gfx mat_sync_block_pink_sync_block_block[];
+extern Gfx mat_revert_sync_block_pink_sync_block_block[];
+extern Gfx mat_sync_block_pink_sync_block_frame[];
+extern Gfx mat_revert_sync_block_pink_sync_block_frame[];
+extern Gfx sync_block_pink_sync_block_pink_vis_mesh_layer_1[];
+extern Gfx sync_block_pink_final_revert_mesh_layer_1[];

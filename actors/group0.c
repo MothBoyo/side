@@ -80,3 +80,7 @@
 #include "vanishblock3/model.inc.c"
 #include "vanishblock4/collision.inc.c"
 #include "vanishblock4/model.inc.c"
+#include "sync_block_pink/model.inc.c"
+#include "sync_block_pink_beep/model.inc.c"
+#include "sync_block_blue_beep/model.inc.c"
+#include "sync_block_blue/model.inc.c"

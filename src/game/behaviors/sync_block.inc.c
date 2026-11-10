@@ -1,40 +1,17 @@
 
 // our function bone in blender
 Gfx *sync_block_color(s32 callContext, struct GraphNode *node) {
-    struct Object *curObj;
-    Gfx *dlStart, *dlHead;
-    struct GraphNodeGenerated *currentGraphNode = (struct  GraphNodeGenerated *) node;
-    
 
-    if (callContext == GEO_CONTEXT_RENDER) { // called every frame when the object is on screen !
-        curObj = (struct Object *) gCurGraphNodeObject; // our o object, important to do curObj-> instead of o-> here !
-        dlStart = alloc_display_list(sizeof(Gfx) * 2);
-        dlHead = dlStart;
-
-        // create r, g and b values
-        s32 r;
-        s32 g;
-        s32 b;
-
-        if (curObj->oSyncBlockColor == 1) { // if we are supposed to be pink, set the rgb values to be pink !
-            r = 255;
-            g = 255 / 2;
-            b = 255;
-        } else { // else it means we are supposed to be cyan, set the rgb values to be cyan !
-            r = 255 / 3;
-            g = (255 / 3) * 2;
-            b = 255;
-        }
-        
-        // apply the colors rgb
-        // apply the alpha by mutliplying curObj->oSyncBlockCurrentBlinkColor (0 or 1) by 255 minus a blinking transparency value
-        gDPSetPrimColor(dlHead++, 0, 0, r, g, b, curObj->oSyncBlockState * (255 - curObj->oSyncBlockCurrentBlinkColor));
-        gSPEndDisplayList(dlHead);
-
-        currentGraphNode->fnNode.node.flags |= (LAYER_TRANSPARENT << 8); // Set draw layer to transparent
-    }
-    return dlStart;
+    return 0;
 }
+
+//here put the models
+#define SYNC_BLOCK_M1               MODEL_SYNC_BLOCK_BLUE
+#define SYNC_BLOCK_M2               MODEL_SYNC_BLOCK_BLUE_BEEP
+#define SYNC_BLOCK_2_M1             MODEL_SYNC_BLOCK_PINK
+#define SYNC_BLOCK_2_M2             MODEL_SYNC_BLOCK_PINK_BEEP
+
+#define SYNC_BLOCK_FRAME            MODEL_SYNC_BLOCK
 
 // initiate the block and set default values
 void sync_block_color_init(void) {
@@ -56,16 +33,37 @@ void sync_block_color_loop(void) {
     f32 max_cycles = 7; // a cycle lasts 1 second, this is after how many seconds we swap the blocks !
     if (o->oSyncBlockState == 1) { // If the block is visible, make it so Mario can stand on it !
         load_object_collision_model();
+        //cur_obj_unhide();
+        
+    } else { 
+       // cur_obj_hide();
     }
+
+    //set models
+    if (o->oSyncBlockColor == 0) { 
+        cur_obj_set_model(SYNC_BLOCK_M1);
+    } else  { 
+        cur_obj_set_model(SYNC_BLOCK_2_M1);
+    } 
+
 
     if (o->oSyncBlockTimer >= 30) { // If 1 seconds has last
         o->oSyncBlockTimer = 0; // reset the timer to be able to count again
         if (o->oSyncBlockCycle > max_cycles - 5) { // If we are just a few cycle away from swapping, do the following:
-            if (o->oDistanceToMario < 1000) { // Mario needs to be close for the sounds to play (we could use cur_obj_play_sound_2 but it's a bit buggy four our purpose)
+            if (o->oDistanceToMario < 3500) { // Mario needs to be close for the sounds to play (we could use cur_obj_play_sound_2 but it's a bit buggy four our purpose)
                 if (o->oSyncBlockCycle >= max_cycles - 1) { // If its the last cycle, do the following:
-                    play_sound(SOUND_MENU_CAMERA_ZOOM_IN, gGlobalSoundSource); // Play swap sound !
+                    play_sound(SOUND_OBJ_MIPS_RABBIT, gGlobalSoundSource); // Play swap sound !
                 } else {
                     play_sound(SOUND_MENU_REVERSE_PAUSE, gGlobalSoundSource); // else, play the cycle ding sound !
+
+                    //REasignmodels
+                    if (o->oSyncBlockColor == 0) { 
+                        cur_obj_set_model(SYNC_BLOCK_M2);
+                    } else  { 
+                        cur_obj_set_model(SYNC_BLOCK_2_M2);
+                    } 
+
+
                 }
             }
         }
@@ -94,4 +92,15 @@ void sync_block_color_loop(void) {
             o->oSyncBlockTargetBlinkColor = 0;
         }
     }
+
+    if (o->oSyncBlockState == 1) { // If the block is visible, make it so Mario can stand on it !
+        load_object_collision_model();
+        //cur_obj_unhide();
+        
+    } else { 
+       // cur_obj_hide();
+       cur_obj_set_model(SYNC_BLOCK_FRAME);
+    }
+
+
 }

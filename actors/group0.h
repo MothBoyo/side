@@ -386,4 +386,8 @@ extern const Gfx white_particle_small_unused_dl[];
 #include "vanishblock4/collision_header.h"
 #include "vanishblock4/geo_header.h"
 #include "mario/geo_header.h"
+#include "sync_block_pink/geo_header.h"
+#include "sync_block_pink_beep/geo_header.h"
+#include "sync_block_blue_beep/geo_header.h"
+#include "sync_block_blue/geo_header.h"
 #endif
