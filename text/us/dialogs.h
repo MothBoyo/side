@@ -1167,7 +1167,9 @@ PLAYTESTERS:\n\
 \n\
 \n\
 Logo and star models\n\
-by ElectricYV"))
+by ElectricYV\n\
+Trailer by\n\
+Reaperradio"))
 
 DEFINE_DIALOG(DIALOG_088, 1, 5, 30, 200, _("\
 Work Elevator\n\

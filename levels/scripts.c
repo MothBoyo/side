@@ -223,6 +223,7 @@ const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK_BLUE_BEEP,      sync_block_blue_beep_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK_PINK,      sync_block_pink_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK_PINK_BEEP,      sync_block_pink_beep_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_SYNC_BLOCK,      sync_block_geo),
     RETURN(),
 };
 
